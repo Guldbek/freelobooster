@@ -17,15 +17,12 @@ class CreateJobsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('ticket');
+            $table->integer('order_id')->unsigned();
+            $table->integer('user_id')->unsigned();
+            $table->integer('booster_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('booster_id')->references('id')->on('users');
 
-        });
-        Schema::table('jobs', function( Blueprint $table ) {
-
-            $table->integer('user_id');
-            $table->foreign('user_id')->reference('id')->on('users');
-
-            $table->integer('booster_id');
-            $table->foreign('booster_id')->reference('id')->on('users');
 
         });
     }

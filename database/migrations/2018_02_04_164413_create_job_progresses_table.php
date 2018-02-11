@@ -15,17 +15,16 @@ class CreateJobProgressesTable extends Migration
     {
         Schema::create('job_progresses', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('job_id');
-            $table->string('current_rank');
+            $table->integer('job_id')->unsigned();
+            $table->integer('current_rank')->unsigned();
 
-            
+
             $table->timestamps();
 
 
         });
-        Schema::table('job_progress', function(Blueprint $table) {
-            $table->foreign('job_id')->reference('id')->on('jobs');
-            $table->foreign('current_rank')->reference('id')->on('league_ranks');
+        Schema::table('job_progresses', function(Blueprint $table) {
+            $table->foreign('job_id')->references('id')->on('jobs');
         });
     }
 

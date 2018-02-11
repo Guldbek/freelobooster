@@ -15,8 +15,15 @@ class CreateOrderAccountsTable extends Migration
     {
         Schema::create('order_accounts', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('order_id')->unsigned();
+            $table->string('league_username');
+            $table->string('league_password');
             $table->timestamps();
         });
+        Schema::table('order_accounts', function (Blueprint $table) {
+            $table->foreign('order_id')->references('id')->on('orders');
+        });
+
     }
 
     /**

@@ -15,7 +15,13 @@ class CreateBoosterGroupsTable extends Migration
     {
         Schema::create('booster_groups', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('payment_percentage');
+            $table->integer('rank_from')->unsigned();
+            $table->integer('rank_to')->unsigned();
             $table->timestamps();
+        });
+        Schema::table('boosters', function (Blueprint $table) {
+            $table->foreign('booster_group_id')->references('id')->on('booster_groups');
         });
     }
 
