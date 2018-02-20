@@ -6,6 +6,16 @@
  */
 
 require('./bootstrap');
+const Parallax = require('parallax-js');
+const ScrollReveal = require('ScrollReveal');
+window.sr = ScrollReveal();
+
+sr.reveal('#scene', { duration: 600, origin: 'bottom' });
+
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene, {
+  relativeInput: true
+});
 
 window.Vue = require('vue');
 

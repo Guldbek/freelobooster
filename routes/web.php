@@ -15,6 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group(['prefix' => 'app'], function () {
+  Route::get('/index', function () {
+      return view('app.index');
+  });
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
