@@ -1,91 +1,6 @@
-/// SECTION SETTINGS
-.section {
-  position: relative;
-  overflow: hidden;
-  min-height: 800px !important;
-}
-
-//----------------------------- SECTIONS --------------------------------------//
-
-#headSection {
-  background-image: url('https://images4.alphacoders.com/600/thumb-1920-600528.png');
-  background-size: cover;
-  .container {
-      padding-top: $navbar-height;
-  }
-
-}
-
-#listSection{
-  background-color: lightgray;
-
-}
-#reviewSection{
-
-  &:before {
-      // content: "";
-      // position: absolute;
-      // z-index: -1;
-      // width: 100%;
-      // height: 180%;
-      // top: 0;
-      // transform: skewY(-12deg);
-      // background: #f6f9fc;
-      content: '';
-      position: absolute;
-      top: 27%;
-      left: 50%;
-      width: 120vw;
-      height: 100%;
-      transform: translate(-50%, -50%) rotate(-8deg) skew(-30deg);
-      background: lightgray;
-      z-index: -1;
-  }
-
-}
-#catcherSection {
-
-  #scene {
-    margin-top: 20rem;
-    z-index: -1;
-    h1 {
-      width: 100%;
-      text-align: right;
-      color: $dark-blue;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      width: 100%;
-    }
-
-  }
-  &:before {
-      content: '';
-      position: absolute;
-      top: 0%;
-      left: 50%;
-      width: 120vw;
-      height: 40%;
-      transform: translate(-50%, -50%) rotate(-8deg) skew(-30deg);
-      background: lightgray;
-      z-index: 4;
-  }
-  &:after {
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      width: 120vw;
-      height: 40%;
-      transform: translate(-50%, -50%) rotate(-8deg) skew(-30deg);
-      background: lightgray;
-      z-index: 4;
-  }
-}
 
 #menu {
-  height: $navbar-height;
+  height: auto !important;
   background-color: rgba(58, 140, 182, 0.75);
   color: white;
   .brand-title{
@@ -99,4 +14,33 @@
 
     }
   }
+}
+
+.parallax-window {
+    min-height: 600px;
+    background: transparent;
+}
+.parallax-mirror {
+    padding-top: 15rem;
+}
+
+// Typografi
+body {
+  font-family: 'Cabin', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+h1{
+  font-size: 2.6rem;
+}
+h2{
+  color: $blue;
+  font-size: 2.3rem;
+}
+h3{
+  color: $blue;
+  font-size: 2rem;
+
 }

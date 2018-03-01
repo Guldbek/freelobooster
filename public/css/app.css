@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);/*!
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);@import url(https://fonts.googleapis.com/css?family=Cabin:400,400i,600,600i);/*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -9994,83 +9994,8 @@ a.text-dark:focus {
   }
 }
 
-.section {
-  position: relative;
-  overflow: hidden;
-  min-height: 800px !important;
-}
-
-#headSection {
-  background-image: url("https://images4.alphacoders.com/600/thumb-1920-600528.png");
-  background-size: cover;
-}
-
-#headSection .container {
-  padding-top: 4rem;
-}
-
-#listSection {
-  background-color: lightgray;
-}
-
-#reviewSection:before {
-  content: '';
-  position: absolute;
-  top: 27%;
-  left: 50%;
-  width: 120vw;
-  height: 100%;
-  -webkit-transform: translate(-50%, -50%) rotate(-8deg) skew(-30deg);
-          transform: translate(-50%, -50%) rotate(-8deg) skew(-30deg);
-  background: lightgray;
-  z-index: -1;
-}
-
-#catcherSection #scene {
-  margin-top: 20rem;
-  z-index: -1;
-}
-
-#catcherSection #scene h1 {
-  width: 100%;
-  text-align: right;
-  color: #13315d;
-}
-
-#catcherSection #scene img {
-  max-width: 100%;
-  height: auto;
-  width: 100%;
-}
-
-#catcherSection:before {
-  content: '';
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  width: 120vw;
-  height: 40%;
-  -webkit-transform: translate(-50%, -50%) rotate(-8deg) skew(-30deg);
-          transform: translate(-50%, -50%) rotate(-8deg) skew(-30deg);
-  background: lightgray;
-  z-index: 4;
-}
-
-#catcherSection:after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  width: 120vw;
-  height: 40%;
-  -webkit-transform: translate(-50%, -50%) rotate(-8deg) skew(-30deg);
-          transform: translate(-50%, -50%) rotate(-8deg) skew(-30deg);
-  background: lightgray;
-  z-index: 4;
-}
-
 #menu {
-  height: 4rem;
+  height: auto !important;
   background-color: rgba(58, 140, 182, 0.75);
   color: white;
 }
@@ -10083,7 +10008,137 @@ a.text-dark:focus {
   color: white;
 }
 
-.col {
-  border: 1px solid red !important;
+.parallax-window {
+  min-height: 600px;
+  background: transparent;
+}
+
+.parallax-mirror {
+  padding-top: 15rem;
+}
+
+body {
+  font-family: 'Cabin', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  color: #3a8cb6;
+  font-size: 2.3rem;
+}
+
+h3 {
+  color: #3a8cb6;
+  font-size: 2rem;
+}
+
+.section {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px !important;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+#headSection {
+  height: 80vh;
+}
+
+#listSection {
+  background-color: #f6f9fc;
+}
+
+#listSection #listContainer .list {
+  padding-left: 0;
+}
+
+#listSection #listContainer .list h3 {
+  text-transform: capitalize;
+  padding-bottom: 0.5rem;
+}
+
+#listSection #listContainer .list li {
+  list-style: none;
+  margin-top: 0.8rem;
+  font-size: 1.3rem;
+}
+
+#listSection #listContainer .list li p {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+#listSection #listContainer .list li .fa-gamepad {
+  margin-left: 1rem;
+  color: #13315d;
+}
+
+#reviewSection {
+  background: #3a8cb6;
+}
+
+#catcherSection {
+  z-index: -1;
+}
+
+#catcherSection .dimmer {
+  background-color: rgba(40, 167, 69, 0.8);
+  position: absolute;
+  top: -5rem;
+  left: 0;
+  width: 100%;
+  height: 200%;
+}
+
+#catcherSection .dimmer .catcherTitle {
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin-top: 15rem;
+}
+
+#catcherSection:before {
+  content: '';
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  width: 120vw;
+  height: 40%;
+  -webkit-transform: translate(-50%, -50%) rotate(-8deg) skew(-30deg);
+          transform: translate(-50%, -50%) rotate(-8deg) skew(-30deg);
+  background: #f6f9fc;
+  z-index: 4;
+}
+
+#catcherSection:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 120vw;
+  height: 40%;
+  -webkit-transform: translate(-50%, -50%) rotate(-8deg) skew(-30deg);
+          transform: translate(-50%, -50%) rotate(-8deg) skew(-30deg);
+  background: #3a8cb6;
+  z-index: 4;
+}
+
+#contactSection {
+  background-image: url("/images/contact_background.png");
+  background-position: right;
+  background-repeat: no-repeat;
 }
 

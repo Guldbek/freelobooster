@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col col-md-4">
-              <h1 class="brand-title">Freeloboost</h1>
+              <h1>Freeloboost</h1>
         </div>
         <div class="col offset-md-2 col-md-6">
           <ul class="nav justify-content-end">
