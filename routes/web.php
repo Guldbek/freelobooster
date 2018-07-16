@@ -16,8 +16,18 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'app'], function () {
+
   Route::get('/index', function () {
       return view('app.index');
+  });
+
+  Route::get('/index', 'PostController@index');
+
+});
+
+Route::group(['prefix' => 'admin', 'middleware' => ''], function () {
+  Route::get('/boosts', function () {
+      return view('admin.boosts');
   });
 });
 
