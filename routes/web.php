@@ -25,9 +25,13 @@ Route::group(['prefix' => 'app'], function () {
 
 });
 
-Route::group(['prefix' => 'admin', 'middleware' => ''], function () {
+Route::group(['prefix' => 'admin'], function () {
   Route::get('/boosts', function () {
       return view('admin.boosts');
+  });
+
+  Route::get('/dashboard', function () {
+      return view('admin.dashboard');
   });
 });
 
