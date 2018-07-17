@@ -2,14 +2,21 @@
 #menu {
   height: auto !important;
   background-color: rgba(58, 140, 182, 0.75);
+
+  .user{
+    color:#c6c6c6;
+  }
+  .danger{
+    color:$red;
+  }
   color: white;
   .brand-title{
-    color: white;
+    color: $white;
   }
   .nav {
     .nav-item{
-      .nav-link {
-        color: white;
+      .nav-link:not(.user,.danger) {
+        color: $white;
       }
 
     }
@@ -17,11 +24,12 @@
 }
 
 .parallax-window {
-    min-height: 600px;
-    background: transparent;
+  min-height: 600px;
+  background: transparent;
+
 }
 .parallax-mirror {
-    padding-top: 15rem;
+  padding-top: 9rem;
 }
 
 // Typografi

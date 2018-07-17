@@ -10000,12 +10000,20 @@ a.text-dark:focus {
   color: white;
 }
 
-#menu .brand-title {
-  color: white;
+#menu .user {
+  color: #c6c6c6;
 }
 
-#menu .nav .nav-item .nav-link {
-  color: white;
+#menu .danger {
+  color: #dc3545;
+}
+
+#menu .brand-title {
+  color: #fff;
+}
+
+#menu .nav .nav-item .nav-link:not(.user):not(.danger) {
+  color: #fff;
 }
 
 .parallax-window {
@@ -10014,7 +10022,7 @@ a.text-dark:focus {
 }
 
 .parallax-mirror {
-  padding-top: 15rem;
+  padding-top: 9rem;
 }
 
 body {
@@ -10045,16 +10053,59 @@ h3 {
   font-size: 2rem;
 }
 
+.butttton {
+  white-space: nowrap;
+  display: inline-block;
+  height: 2.6rem;
+  line-height: 2.6rem;
+  padding: 0 0.9rem;
+  border-radius: 0.4rem;
+  border: 0rem;
+  border-bottom: 0.3rem solid #167d06;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+  text-decoration: none;
+  -webkit-transition: all .15s ease;
+  transition: all .15s ease;
+  color: #fff;
+  background: #28a745;
+  text-shadow: 0 1px 3px #167d06;
+}
+
+.row {
+  padding-right: 0;
+  margin-right: 0;
+}
+
 .section {
   position: relative;
   overflow: hidden;
-  min-height: 300px !important;
+  min-height: 300px;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
+#menu li,
+#menu .t {
+  margin-top: 0.5rem;
+}
+
+#menu .nav-divider {
+  margin-top: 1rem;
+}
+
 #headSection {
   height: 80vh;
+}
+
+#headSection h1 {
+  color: #13315d;
+}
+
+#headSection .danger {
+  color: #dc3545;
 }
 
 #listSection {
@@ -10068,6 +10119,7 @@ h3 {
 #listSection #listContainer .list h3 {
   text-transform: capitalize;
   padding-bottom: 0.5rem;
+  margin-bottom: -0.6rem;
 }
 
 #listSection #listContainer .list li {
@@ -10081,64 +10133,256 @@ h3 {
   margin-left: 1rem;
 }
 
-#listSection #listContainer .list li .fa-gamepad {
+#listSection #listContainer .list li .fa-angle-right {
   margin-left: 1rem;
   color: #13315d;
+}
+
+#listSection #listContainer .list li .list-image .unselectable {
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12,
+.col,
+.col-auto,
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm,
+.col-sm-auto,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md,
+.col-md-auto,
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg,
+.col-lg-auto,
+.col-xl-1,
+.col-xl-2,
+.col-xl-3,
+.col-xl-4,
+.col-xl-5,
+.col-xl-6,
+.col-xl-7,
+.col-xl-8,
+.col-xl-9,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12,
+.col-xl,
+.col-xl-auto {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 #reviewSection {
   background: #3a8cb6;
 }
 
+#reviewSection .container {
+  margin-top: -5rem;
+}
+
+#reviewSection h1 {
+  color: #fff;
+  font-size: 3rem;
+}
+
+#reviewSection p {
+  color: #fff;
+  font-style: italic;
+}
+
+#reviewSection .review-text {
+  font-size: 2.2rem;
+}
+
+.right {
+  float: right;
+  margin-right: 10rem;
+}
+
+.catcherSection {
+  padding: 0 !important;
+}
+
 #catcherSection {
   z-index: -1;
+  position: relative;
 }
 
 #catcherSection .dimmer {
   background-color: rgba(40, 167, 69, 0.8);
   position: absolute;
-  top: -5rem;
-  left: 0;
-  width: 100%;
+  top: -65%;
   height: 200%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#catcherSection .dimmer .catcherTitle {
-  width: 100%;
-  text-align: center;
-  color: white;
-  margin-top: 15rem;
+#catcherSection .dimmer-btn {
+  margin-top: 3rem;
+}
+
+#catcherSection .catcherTitle {
+  font-size: 4rem;
+  color: #fff;
+  margin-bottom: -1rem;
 }
 
 #catcherSection:before {
   content: '';
   position: absolute;
-  top: 0%;
-  left: 50%;
-  width: 120vw;
-  height: 40%;
-  -webkit-transform: translate(-50%, -50%) rotate(-8deg) skew(-30deg);
-          transform: translate(-50%, -50%) rotate(-8deg) skew(-30deg);
-  background: #f6f9fc;
-  z-index: 4;
+  top: -10%;
+  left: 0;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transform: skewY(-3deg);
+          transform: skewY(-3deg);
+  width: 100%;
+  height: 20%;
+  background: #f8f9fa;
+  z-index: 5;
 }
 
 #catcherSection:after {
   content: '';
   position: absolute;
-  top: 100%;
-  left: 50%;
-  width: 120vw;
+  top: 60%;
+  left: 0px;
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-transform: skewY(5deg);
+          transform: skewY(5deg);
+  width: 100%;
   height: 40%;
-  -webkit-transform: translate(-50%, -50%) rotate(-8deg) skew(-30deg);
-          transform: translate(-50%, -50%) rotate(-8deg) skew(-30deg);
   background: #3a8cb6;
   z-index: 4;
+}
+
+#catcherSection .whitebtn {
+  color: #13315d;
+  background-color: white;
+  text-shadow: 0px 1px 0px #13315d;
+  border-bottom: 0.3rem solid #13315d;
 }
 
 #contactSection {
   background-image: url("/images/contact_background.png");
   background-position: right;
   background-repeat: no-repeat;
+}
+
+#contactSection .contactTitle {
+  color: #13315d;
+  font-size: 3rem;
+}
+
+#contactSection .contactText {
+  color: #13315d;
+  font-size: 1.4rem;
+  width: 60%;
+}
+
+#footerSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #141414;
+}
+
+#footerSection hr {
+  background-color: #167d06;
+  width: 3rem;
+}
+
+#footerSection .footerTitle {
+  color: #656565;
+}
+
+#footerSection .footerList {
+  color: #656565;
+  font-size: 0.9rem;
+  paddin-top: -0.7rem;
+}
+
+#footer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+#footer p {
+  padding-top: 0.2rem;
+  margin-top: -0.2rem;
+  margin-bottom: -1rem;
 }
 
