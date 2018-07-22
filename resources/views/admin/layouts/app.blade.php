@@ -16,17 +16,8 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="navbar-header">
-
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
@@ -71,8 +62,56 @@
             </div>
         </nav>
 
-        @yield('content')
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between">
+              <div class="col-md-3 sidebar">
+                  <a href="dashboard"><h4>Side menu</h4></a>
+
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <a href="/admin/users">Users</a>
+                      <ul>
+                        <li><a href="user/create">Add user</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12"><a href="boosters">Boosters</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">Orders</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">Prices</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">Boosters</div>
+                  </div>
+              </div>
+              <div class="col-md-9">
+                <div class="row">
+                  <div class="col-lg-8">
+                    @if(session()->has('message'))
+                        <div class="alert alert-success">
+                            {{ session()->get('message') }}
+                        </div>
+                    @endif
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                  </div>
+                </div>
+                @yield('content')
+              </div>
+        </div>
     </div>
+  </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

@@ -19,21 +19,30 @@ Route::group(['prefix' => 'app'], function () {
   Route::get('/index', function () {
       return view('app.index');
   });
-
-
 });
 
 Route::group(['prefix' => 'admin'], function () {
-  Route::get('/boosts', function () {
-      return view('admin.boosts');
-  });
 
+  // Admin sidebar
+  Route::get('/boosters', 'BoosterController@index');
   Route::get('/dashboard', function () {
       return view('admin.dashboard');
   });
+
+
+
+  // User routes
+  Route::get('/users', 'UserController@index');
+  Route::get('/user/create', 'UserController@create');
+  Route::post('/user/store', 'UserController@store');
+  Route::post('/user/delete/{user}', 'UserController@destroy');
+
 });
 
 
 Auth::routes();
+
+Route::get('/admin', 'HomeController@index')->name('home');
+
 
 Route::get('/home', 'HomeController@index')->name('home');

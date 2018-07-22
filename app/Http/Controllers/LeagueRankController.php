@@ -37,7 +37,6 @@ class LeagueRankController extends Controller
     {
         //
     }
-
     /**
      * Display the specified resource.
      *
