@@ -1,15 +1,24 @@
-
+body{
+  overflow-x: hidden;
+}
+.header{
+  background-color:rgba(58, 140, 182, 1);
 #menu {
-  height: auto !important;
-  background-color: rgba(58, 140, 182, 0.75);
 
+  width:100%;
+  height: auto !important;
+  background-color: rgba(58, 140, 182, 1);
+
+  .white{
+    color:white;
+  }
   .user{
     color:#c6c6c6;
   }
   .danger{
     color:$red;
   }
-  color: white;
+
   .brand-title{
     color: $white;
   }
@@ -21,8 +30,11 @@
 
     }
   }
+  .nav-divider{
+    height:100%;
+  }
 }
-
+}
 .parallax-window {
   min-height: 600px;
   background: transparent;

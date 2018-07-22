@@ -53,13 +53,14 @@
           <div class="container reviewcontainer">
              <h1 class="text-left review-title">Guaranteed time</h1>
              <h1 class="textleft review-title">span or full cash back!</h1>
-              	   <p class="text-left review-text" style="">"LolBoosting nice review from some random customer"</p>
+              	   <p class="text-left review-text">"LolBoosting nice review from some random customer"</p>
              <p class="text-left review-info">Daniel on 24-07-2003</p>
              <button type="button" name="button" class="right dimmer-btn butttton ">See more</button>
           </div>
       </div>
     </div>
-    <div class="row section" id="contactSection">
+    <div class="section img-fluid" id="contactSection">
+      <div class="row">
       <div class="col col-sm-12">
           <div class="container">
               <div class="row">
@@ -69,10 +70,10 @@
                   <button type="button" name="button" class="dimmer-btn butttton whitebtn">Read more</button>
                 </div>
                 <div class="col-sm-12 col-lg-6">
-
                 </div>
               </div>
           </div>
+      </div>
       </div>
     </div>
     <div class="row section" id="footerSection">

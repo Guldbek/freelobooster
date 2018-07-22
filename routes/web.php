@@ -16,12 +16,17 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'app'], function () {
+  Route::POST('calc/price', 'LeagueRankController@index');
   Route::get('/index', function () {
       return view('app.index');
   });
 
+  Route::get('/calc', function(){
+    return view('app.price');
+  });
 
 });
+
 
 Route::group(['prefix' => 'admin'], function () {
   Route::get('/boosts', function () {
@@ -32,6 +37,7 @@ Route::group(['prefix' => 'admin'], function () {
       return view('admin.dashboard');
   });
 });
+
 
 
 Auth::routes();

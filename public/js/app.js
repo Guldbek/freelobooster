@@ -11355,6 +11355,7 @@ window.sr = ScrollReveal();
 
 sr.reveal('#scene', { duration: 600, origin: 'bottom' });
 sr.reveal('#listContainer ul li', { duration: 600, origin: 'bottom' });
+sr.reveal('.review-text, .review-info', { duration: 600, origin: 'bottom' });
 
 window.Vue = __webpack_require__(38);
 

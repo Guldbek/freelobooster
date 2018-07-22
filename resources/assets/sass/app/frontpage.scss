@@ -2,16 +2,16 @@
 .butttton{
   white-space: nowrap;
   display: inline-block;
-  height: 2.6rem;
-  line-height: 2.6rem;
-  padding: 0 0.9rem;
-  border-radius:0.4rem;
+  height: 42px;
+  line-height: 2px;
+  padding: 0 15px;
+  border-radius:7px;
   border:0rem;
   border-bottom:0.3rem solid $dark-green;
   font-size: 0.9rem;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: .025em;
+  letter-spacing: 1.5px;
   text-decoration: none;
   -webkit-transition: all .15s ease;
   transition: all .15s ease;
@@ -26,26 +26,16 @@
   position: relative;
   overflow: hidden;
   min-height: 300px;
-  padding-top: 5rem;
-  padding-bottom:5rem;
+  padding-top: 80px;
+  padding-bottom:80px;
 }
-
-
-
-
-
 //----------------------------- SECTIONS -------------------------------------//
-#menu{
-  .user-nav{
-    margin-right:-20px;
-  }
-  li,.t {
-    margin-top:0.5rem;
-  }
-  .nav-divider{
-    margin-top:1rem;
-  }
-}
+
+
+
+
+
+
 #headSection {
   height: 80vh;
   h1{
@@ -58,7 +48,7 @@
 }
 
 #listSection{
-  background-color: $gray;
+  background-color:$white;
   #listContainer {
     .list{
       padding-left: 0;
@@ -99,7 +89,7 @@
 }
 
 #reviewSection{
-  background: $blue;
+  background: $dark-blue;
 
   .container{
     margin-top:-5rem;
@@ -124,6 +114,7 @@
 
 .catcherSection{
   padding:0!important;
+
 }
 #catcherSection {
   z-index: -1;
@@ -143,9 +134,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    h1:nth-child(even){
 
-    }
   }
   .dimmer-btn{
     margin-top:3rem;
@@ -165,7 +154,7 @@
     transform: skewY(-3deg);
     width:100%;
     height:20%;
-    background:$light;
+    background:$white;
     z-index: 5;
   }
   &:after {
@@ -177,8 +166,7 @@
     transform:skewY(5deg);
     width: 100%;
     height: 40%;
-    // transform: translate(-50%, -50%) rotate(-8deg) skew(-30deg);
-    background: $blue;
+    background: $dark-blue;
     z-index: 4;
   }
   .whitebtn{
@@ -190,8 +178,16 @@
 }
 #contactSection{
   background-image: url('/images/contact_background.png');
-  background-position: right;
+  background-position:bottom right;
   background-repeat: no-repeat;
+  margin-left:0px;
+  @media screen and (max-width: 991px) {
+    #contactSection{
+      background-size:50%;
+    }
+    }
+
+
   .contactTitle{
     color:$dark-blue;
     font-size:3rem;
@@ -219,7 +215,7 @@
   .footerList{
     color:#656565;
     font-size:0.9rem;
-    paddin-top:-0.7rem;
+    padding-top:-0.7rem;
   }
 
 }
