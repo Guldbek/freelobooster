@@ -16,7 +16,6 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'app'], function () {
-
   Route::get('/index', function () {
       return view('app.index');
   });
