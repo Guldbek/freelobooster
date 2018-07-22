@@ -10099,15 +10099,39 @@ h3 {
 }
 
 #headSection {
-  height: 80vh;
+  background-image: url("/images/headbg.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-origin: center;
+  height: 700px;
+}
+
+#headSection .headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
 }
 
 #headSection h1 {
-  color: #13315d;
+  padding-top: 120px;
+  color: #3a8cb6;
 }
 
 #headSection .danger {
   color: #dc3545;
+}
+
+#headSection .headImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #listSection {

@@ -37,13 +37,28 @@
 
 
 #headSection {
-  height: 80vh;
-  h1{
-    color:$dark-blue;
-
+  background-image:url('/images/headbg.png');
+  background-position:bottom;
+  background-repeat: no-repeat;
+  background-origin: center;
+  height: 700px;
+  .headline{
+    display:flex;
+    justify-content:center;
+    text-align: center;
   }
+  h1{
+      padding-top:120px;
+      color:$blue;
+  }
+
+
   .danger{
     color:$red;
+  }
+  .headImage{
+    display:flex;
+    justify-content: center;
   }
 }
 
