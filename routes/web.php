@@ -21,7 +21,6 @@ Route::group(['prefix' => 'app'], function () {
       return view('app.index');
   });
 
-  Route::get('/index', 'PostController@index');
 
 });
 
