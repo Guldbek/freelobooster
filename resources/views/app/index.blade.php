@@ -5,7 +5,6 @@
 
     <div class="row section" id="headSection">
       <div class="col col-sm-12" >
-        <!-- <div class="parallax-window" data-parallax="scroll" data-image-src="{{ asset('images/catch.jpg') }}"> -->
           <div class="headline">
             <h1 class="">FreeloBOOSTING</h1>
           </div>

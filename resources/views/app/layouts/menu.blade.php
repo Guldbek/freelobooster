@@ -22,7 +22,7 @@
         <p class="white nav-item nav-link nav-divider web-divide">|</p>
           <li class="nav-item dropdown text-center">
         <a class="nav-link white dropdown-toggle user" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Daniel
+          {{Auth::user()->name}}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="#">Settings</a>
