@@ -19,7 +19,7 @@
 
         @if(Auth::check())
         <hr class="white nav-item nav-link nav-divider mobile-divide">
-        <p class="white nav-item nav-link nav-divider web-divide">|</p>
+        <li class="white nav-item nav-link nav-divider web-divide">|</li>
           <li class="nav-item dropdown text-center">
         <a class="nav-link white dropdown-toggle user" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           {{Auth::user()->name}}
@@ -30,7 +30,7 @@
           <a class="dropdown-item danger" href="#">Logout</a>
         </div>
         @else
-        <p class="white nav-item nav-link nav-divider web-divide">|</p>
+        <li class="white nav-item nav-link nav-divider web-divide">|</li>
         <hr class="white nav-item nav-link nav-divider mobile-divide">
         <li class="nav-item">
           <a class="nav-link user-nav white text-center" href="#">Register</a>
