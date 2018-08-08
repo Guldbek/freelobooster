@@ -11,13 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::group(['prefix' => 'app'], function () {
   Route::POST('calc/price', 'LeagueRankController@index');
-  Route::get('/index', function () {
+  Route::get('/', function () {
       return view('app.index');
   });
 
