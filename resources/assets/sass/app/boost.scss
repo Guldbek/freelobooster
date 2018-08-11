@@ -1,0 +1,134 @@
+.cont{
+margin-top:56px;
+}
+$dark: #555;
+$color--primary: $green;
+
+
+.typo {
+  font-size: 2em!important;
+  font-weight: 700;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #585858;
+  text-decoration: none;
+  option {
+    font-size:1em!important;
+  }
+}
+
+.transition {
+   transition: all .4s ease-in-out;
+}
+
+
+body {
+  text-align: center;
+}
+
+.wrapper {
+  height: 100vh;
+  font-size: 1em!important;
+}
+.list2{
+  display: inline-block;
+  position: relative;
+  // border: 1px solid red;
+
+  ul {
+    text-align: left;
+    position: absolute;
+    padding: 0;
+    top: 0;
+    left: 0;
+    display: none;
+    .active {
+      display: block;
+    }
+
+  }
+}
+.noshow{
+  display:none;
+}
+.list {
+  display: inline-block;
+  position: relative;
+  //border: 1px solid red;
+  // margin-left: 6px;
+  ul {
+    text-align: left;
+    position: absolute;
+    padding: 0;
+    top: 0;
+    left: 0;
+    display: none;
+    .active {
+      display: block;
+    }
+
+  }
+  li {
+    list-style:none;
+    &:first-child a {
+      color: desaturate($color--primary, 40%);
+    }
+  }
+  a {
+    @extend .typo;
+    transition: all .4s;
+    color: $color--primary;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: '';
+      height: 5px;
+      width: 0;
+      left: 0;
+      background: lighten($color--primary, 20%);
+      bottom: 0;
+      transition: all .4s ease-out;
+    }
+    &:hover {
+      cursor: pointer;
+      color: lighten($color--primary, 20%);
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+select {
+  display: inline;
+  border: 0;
+  width: auto;
+  margin-left: 10px;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-bottom: 2px solid $dark;
+  color: $color--primary;
+  transition: all .4s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  option {
+    border: 0;
+    border-bottom: 1px solid $dark;
+    padding: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+}
+
+.placeholder, .placeholder2 {
+  //visibility: hidden;
+  //position: fixed;
+  border-bottom: 4px solid;
+  cursor: pointer;
+  &:hover {
+    color: lighten($dark, 20%);
+  }
+}

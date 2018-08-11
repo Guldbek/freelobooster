@@ -14,9 +14,9 @@
         <a class="nav-link white" href="#">Features</a>
       </li>
       <li class="nav-item text-center">
-        <a class="nav-link white" href="#">Pricing</a>
+        <a class="nav-link white" href="app/boost">Pricing</a>
       </li>
-
+<!-- .. -->
         @if(Auth::check())
         <hr class="white nav-item nav-link nav-divider mobile-divide">
         <li class="white nav-item nav-link nav-divider web-divide">|</li>
@@ -39,7 +39,7 @@
           <a class="nav-link user-nav white text-center" href="#">Login</a>
         </li>
         @endif
-
+<!-- .. -->
 
       </li>
     </ul>

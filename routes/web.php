@@ -24,7 +24,9 @@ Route::group(['prefix' => 'app'], function () {
   Route::get('/calc', function(){
     return view('app.price');
   });
-
+  Route::get('/boost',function(){
+    return view('app.boost');
+  });
 });
 
 
