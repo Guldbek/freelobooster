@@ -35,7 +35,22 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      \Stripe\Stripe::setApiKey("sk_test_6ZOw9gaD4kLLGyQt9cvEcEZi");
+          $response =    \Stripe\Charge::create(array(
+          "amount" => 2000,
+          "currency" => "dkk",
+          "source" => "tok_visa", // obtained with Stripe.js
+          "description" => "Charge for jenny.rosen@example.com",
+          "metadata" => array("user_id" => "3")
+      ));
+      dd($response);
+
+      $order = new Order;
+
+      $order->
+
+
+
     }
 
     /**

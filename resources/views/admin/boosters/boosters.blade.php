@@ -4,29 +4,45 @@
 @section('content')
 <div id="users">
   <div class="col-lg-8" class="data_table">
-      @foreach($boosters as $booster)
-
       <div class="row">
         <div class="col-md-2">
-          <a href="/admin/user/{{ $booster['user']->id }}">{{  $booster['user']->name }}</a>
+          <p class="bold"> User </p>
         </div>
         <div class="col-md-2">
-          <a href="/admin/user/{{ $booster['boosterGroup']->id }}">{{  $booster['boosterGroup']->name }}</a>
+          <p class="bold"> Booster group </p>
         </div>
         <div class="col-md-2">
-          {{ $booster->getSumOfPercentage() }}
+          <p class="bold"> Percentage cut of job </p>
         </div>
         <div class="col-md-2">
-          {{ $booster->created_at }}
-        </div>
-        <div class="col-md-2">
-          <form action="/admin/user/delete/{{$booster->id}}" method="POST">
-            {{ csrf_field() }}
-            <button>Remove</button>
-          </form>
+          <p class="bold"> Booster Since </p>
         </div>
       </div>
-      @endforeach
+      <div class="row">
+        <div class="list-group">
+          @foreach($boosters as $booster)
+          <a href="#" class="list-group-item list-group-item-action  ">
+            <div class="row">
+              <div class="col-md-2">
+              {{  $booster['user']->name }}
+              </div>
+              <div class="col-md-2">
+              {{  $booster['boosterGroup']->name }}
+              </div>
+              <div class="col-md-2">
+                {{ $booster->getSumOfPercentage() }}
+              </div>
+              <div class="col-md-2">
+                {{ $booster->created_at }}
+              </div>
+              <div class="col-md-2">
+                {{ $booster->created_at }}
+              </div>
+            </div>
+          </a>
+          @endforeach
+        </div>
+      </div>
   </div>
 </div>
 @endsection

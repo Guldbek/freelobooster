@@ -13,7 +13,7 @@
               {{ $user->email }}
             </div>
             <div class="col-md-2">
-              {{ $user->role }}
+              {{ $user->getUserRoleName() }}
             </div>
             <div class="col-md-2">
               {{ $user->created_at }}

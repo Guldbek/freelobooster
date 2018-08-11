@@ -14,7 +14,9 @@ class BoosterGroupController extends Controller
      */
     public function index()
     {
-        //
+      $boosters = Boosters_group::with('user', 'boosterGroup')->get();
+      return view('admin.boosters.boosters', compact('boosters'));
+
     }
 
     /**

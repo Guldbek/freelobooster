@@ -71,12 +71,17 @@
                     <div class="col-lg-12">
                       <a href="/admin/users">Users</a>
                       <ul>
-                        <li><a href="user/create">Add user</a></li>
+                        <li><a href="/admin/user/create">Add user</a></li>
                       </ul>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-lg-12"><a href="boosters">Boosters</a></div>
+                    <div class="col-lg-12">
+                      <a href="/admin/boosters">Boosters</a>
+                      <ul>
+                        <li><a href="/admin/boosters/group">Group</a></li>
+                      </ul>
+                    </div>
                   </div>
                   <div class="row">
                     <div class="col-lg-12">Orders</div>

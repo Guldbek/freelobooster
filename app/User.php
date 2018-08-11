@@ -26,4 +26,33 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    public function getUserRoleName(){
+        switch ($this->role) {
+          case 4:
+            return 'Admin';
+            break;
+
+          case 3:
+            return 'Booster';
+            break;
+
+          case 2:
+            return 'Premium';
+            break;
+
+          case 1:
+            return 'User';
+            break;
+        }
+
+    }
+
+    public function auctionEndDate()
+    {
+        return Carbon::createFromFormat('m/d/Y', $this->auction_end);
+    }
+
+
 }

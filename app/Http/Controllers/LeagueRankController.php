@@ -17,6 +17,11 @@ class LeagueRankController extends Controller
         //
     }
 
+    public function makeRanks() {
+      $league_rank = new League_rank;
+      $createRank = $league_rank->createLeagueRanks();
+    }
+
     /**
      * Show the form for creating a new resource.
      *

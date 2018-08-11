@@ -25,11 +25,16 @@ Route::group(['prefix' => 'admin'], function () {
 
   // Admin sidebar
   Route::get('/boosters', 'BoosterController@index');
+  Route::get('/boosters/group', 'BoosterGroupController@index');
   Route::get('/dashboard', function () {
       return view('admin.dashboard');
   });
 
 
+  // Use to create league ranks
+  // Route::get('/leagueranks/make', 'LeagueRankController@makeRanks');
+
+  Route::get('/order', 'OrderController@store');
 
   // User routes
   Route::get('/users', 'UserController@index');
