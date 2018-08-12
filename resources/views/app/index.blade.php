@@ -54,7 +54,7 @@
       <div class="col-sm-12">
           <div class="container reviewcontainer">
              <h1 class="text-left review-title">Guaranteed time</h1>
-             <h1 class="textleft review-title">span or full cash back!</h1>
+             <h1 class="text-left review-title">span or full cash back!</h1>
               	   <p class="text-left review-text">"LolBoosting nice review from some random customer"</p>
              <p class="text-left review-info">Daniel on 24-07-2003</p>
              <button type="button" name="button" class="right dimmer-btn butttton ">See more</button>
