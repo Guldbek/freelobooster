@@ -10567,6 +10567,12 @@ h3 {
   text-shadow: 0 1px 3px #167d06;
 }
 
+#footer {
+  color: white;
+  background-color: black;
+  height: 24px;
+}
+
 .section {
   position: relative;
   overflow: hidden;
@@ -10822,16 +10828,35 @@ h3 {
   margin-bottom: -1rem;
 }
 
-.cont {
+body {
+  background-image: url("/images/bgpriceoverlay.png");
+}
+
+#rankselection {
   margin-top: 56px;
+  min-height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+#rankselection .row {
+  width: 100%;
 }
 
 .typo,
 .list a {
-  font-size: 2em !important;
+  font-size: 0.8em !important;
   font-weight: 700;
   font-family: 'Source Sans Pro', sans-serif;
-  color: #585858;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -10841,8 +10866,8 @@ h3 {
 }
 
 .transition {
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 body {
@@ -10850,26 +10875,7 @@ body {
 }
 
 .wrapper {
-  height: 100vh;
-  font-size: 1em !important;
-}
-
-.list2 {
-  display: inline-block;
-  position: relative;
-}
-
-.list2 ul {
-  text-align: left;
-  position: absolute;
-  padding: 0;
-  top: 0;
-  left: 0;
-  display: none;
-}
-
-.list2 ul .active {
-  display: block;
+  font-size: 1.5em !important;
 }
 
 .noshow {
@@ -10885,7 +10891,7 @@ body {
   text-align: left;
   position: absolute;
   padding: 0;
-  top: 0;
+  top: 7px;
   left: 0;
   display: none;
 }
@@ -10896,15 +10902,16 @@ body {
 
 .list li {
   list-style: none;
+  line-height: 25px;
 }
 
 .list li:first-child a {
-  color: #517e5b;
+  color: #329d4b;
 }
 
 .list a {
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   color: #28a745;
   position: relative;
 }
@@ -10917,8 +10924,8 @@ body {
   left: 0;
   background: #5dd879;
   bottom: 0;
-  -webkit-transition: all .4s ease-out;
-  transition: all .4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 .list a:hover {
@@ -10940,8 +10947,8 @@ select {
   -moz-appearance: none;
   border-bottom: 2px solid #555;
   color: #28a745;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 select:hover {
@@ -10956,15 +10963,102 @@ select option {
   -moz-appearance: none;
 }
 
-.placeholder,
-.placeholder2 {
+.currentlp,
+.currentrank,
+.currentrank2,
+.desiredlp,
+.desiredrank,
+.desiredrank2 {
   border-bottom: 4px solid;
   cursor: pointer;
 }
 
-.placeholder:hover,
-.placeholder2:hover {
+.currentlp:hover,
+.currentrank:hover,
+.currentrank2:hover,
+.desiredlp:hover,
+.desiredrank:hover,
+.desiredrank2:hover {
   color: #888888;
+}
+
+.pricing-wrapper {
+  width: 100%;
+  background-color: #13315d;
+}
+
+#pricing {
+  min-height: 300px;
+  padding: 0;
+  color: #fff;
+  width: 100%;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 30px;
+}
+
+#pricing .user-order {
+  list-style: none;
+  font-size: 1.3em;
+  text-align: left;
+}
+
+#pricing .user-order .currentlp,
+#pricing .user-order .currentrank,
+#pricing .user-order .currentrank2,
+#pricing .user-order .desiredlp,
+#pricing .user-order .desiredrank,
+#pricing .user-order .desiredrank2 {
+  border-bottom: 0;
+}
+
+#pricing .user-order .order-price {
+  font-weight: bold;
+}
+
+#pricing .user-order .user-price {
+  color: #28a745;
+}
+
+#pricing .user-order-link-text {
+  color: inherit;
+  font-style: italic;
+}
+
+#arrowdiv {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 30px;
+}
+
+#arrowdiv row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.test-div-1 {
+  background: #13315d;
+  height: 30px;
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 95%, 20% 0);
+  clip-path: polygon(0 0, 0 100%, 0 100%, 100% 100%, 95% 0);
+}
+
+.test-div-2 {
+  background: #13315d;
+  height: 30px;
+  -webkit-clip-path: polygon(0 0, 10% -95%, 0 100%, 100% 100%, 100% 0);
+  clip-path: polygon(0 0, 10% -95%, 0 100%, 100% 100%, 100% 0);
 }
 
 #menu {
