@@ -4,45 +4,28 @@
 @section('content')
 <div id="users">
   <div class="col-lg-8" class="data_table">
-      <div class="row">
-        <div class="col-md-2">
-          <p class="bold"> User </p>
-        </div>
-        <div class="col-md-2">
-          <p class="bold"> Booster group </p>
-        </div>
-        <div class="col-md-2">
-          <p class="bold"> Percentage cut of job </p>
-        </div>
-        <div class="col-md-2">
-          <p class="bold"> Booster Since </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="list-group">
-          @foreach($boosters as $booster)
-          <a href="#" class="list-group-item list-group-item-action  ">
-            <div class="row">
-              <div class="col-md-2">
-              {{  $booster['user']->name }}
-              </div>
-              <div class="col-md-2">
-              {{  $booster['boosterGroup']->name }}
-              </div>
-              <div class="col-md-2">
-                {{ $booster->getSumOfPercentage() }}
-              </div>
-              <div class="col-md-2">
-                {{ $booster->created_at }}
-              </div>
-              <div class="col-md-2">
-                {{ $booster->created_at }}
-              </div>
-            </div>
-          </a>
-          @endforeach
-        </div>
-      </div>
+    <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Booster group</th>
+        <th scope="col">Percentage</th>
+        <th scope="col">Booster since</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach($boosters as $booster)
+        <tr>
+          <th scope="row">{{  $booster['user']->name }}</th>
+          <td>{{ $booster['boosterGroup']->name }}</td>
+          <td>{{ $booster->getSumOfPercentage() }}</td>
+          <td>{{ $booster->created_at }}</td>
+          <td><a href="/admin/user/{{ $booster['user']->id }}">See profile</a></td>
+        </tr>
+      @endforeach
+    </tbody>
+  </table>
   </div>
 </div>
 @endsection

@@ -14,8 +14,8 @@ class BoosterGroupController extends Controller
      */
     public function index()
     {
-      $boosters = Boosters_group::with('user', 'boosterGroup')->get();
-      return view('admin.boosters.boosters', compact('boosters'));
+      $booster_groups = Booster_group::with('rankTo', 'rankFrom')->get();
+      return view('admin.boosters.groups', compact('booster_groups'));
 
     }
 

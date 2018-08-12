@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class League_rank extends Model
 {
 
-
+  public function boosterGroup(){
+    return $this->hasMany('App\Booster_group');
+  }
 
 
 

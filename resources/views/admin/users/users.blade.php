@@ -1,31 +1,29 @@
-
 @extends('admin.layouts.app')
-
 @section('content')
 <div id="users">
   <div class="col-lg-8" class="data_table">
-    @foreach($users as $user)
-          <div class="row">
-            <div class="col-md-2">
-              <a href="/admin/user/{{ $user->id }}">{{ $user->name }}</a>
-            </div>
-            <div class="col-md-2">
-              {{ $user->email }}
-            </div>
-            <div class="col-md-2">
-              {{ $user->getUserRoleName() }}
-            </div>
-            <div class="col-md-2">
-              {{ $user->created_at }}
-            </div>
-            <div class="col-md-2">
-              <form action="/admin/user/delete/{{$user->id}}" method="POST">
-                {{ csrf_field() }}
-                <button>delete</button>
-              </form>
-            </div>
-          </div>
-    @endforeach
+    <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Role</th>
+        <th scope="col">Registerd</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach($users as $user)
+        <tr>
+          <th scope="row">{{ $user->name }}</th>
+          <td>{{ $user->email }}</td>
+          <td>{{ $user->getUserRoleName() }}</td>
+          <td>{{ $user->created_at }}</td>
+          <td><a href="/admin/user/{{ $user->id }}">See profile</a></td>
+        </tr>
+      @endforeach
+    </tbody>
+  </table>
   </div>
 </div>
 @endsection

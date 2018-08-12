@@ -65,7 +65,6 @@
         <div class="container-fluid">
             <div class="d-flex justify-content-between">
               <div class="col-md-3 sidebar">
-                  <a href="dashboard"><h4>Side menu</h4></a>
 
                   <div class="row">
                     <div class="col-lg-12">
@@ -84,13 +83,14 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-lg-12">Orders</div>
+                    <div class="col-lg-12">
+                      <a href="/admin/orders">Orders</a>
+                    </div>
                   </div>
                   <div class="row">
-                    <div class="col-lg-12">Prices</div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-12">Boosters</div>
+                    <div class="col-lg-12">
+                      <a href="/admin/ranks">Ranks</a>
+                    </div>
                   </div>
               </div>
               <div class="col-md-9">

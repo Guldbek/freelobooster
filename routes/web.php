@@ -34,7 +34,7 @@ Route::group(['prefix' => 'admin'], function () {
   // Use to create league ranks
   // Route::get('/leagueranks/make', 'LeagueRankController@makeRanks');
 
-  Route::get('/order', 'OrderController@store');
+  Route::post('/order', 'OrderController@store');
 
   // User routes
   Route::get('/users', 'UserController@index');
