@@ -10828,8 +10828,9 @@ h3 {
   margin-bottom: -1rem;
 }
 
-body {
+#boostWrapper {
   background-image: url("/images/bgpriceoverlay.png");
+  text-align: center;
 }
 
 #rankselection {
@@ -10868,10 +10869,6 @@ body {
 .transition {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-}
-
-body {
-  text-align: center;
 }
 
 .wrapper {

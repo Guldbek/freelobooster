@@ -2,6 +2,7 @@
 @extends('app.layouts.app')
 
 @section('content')
+<div id="boostWrapper">
   <div class="cont" id="rankselection">
       <div class="row">
         <div class="col-lg-6">
@@ -153,4 +154,5 @@
         </div>
       </div>
     </div>
+  </div>
 @endsection

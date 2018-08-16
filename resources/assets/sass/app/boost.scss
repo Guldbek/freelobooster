@@ -1,8 +1,9 @@
 $dark: #555;
 $color--primary: $green;
 
-body{
+#boostWrapper{
   background-image:url('/images/bgpriceoverlay.png');
+  text-align: center;
 }
 #rankselection {
 
@@ -36,11 +37,6 @@ body{
 .transition {
   transition: all 0.4s ease-in-out;
 }
-
-body {
-  text-align: center;
-}
-
 .wrapper {
   font-size: 1.5em!important;
 }
