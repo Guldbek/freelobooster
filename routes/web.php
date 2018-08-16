@@ -16,26 +16,38 @@
 // });
 
 Route::group(['prefix' => 'app'], function () {
-  Route::POST('calc/price', 'LeagueRankController@index');
-  Route::get('/', function () {
-      return view('app.index');
-  });
+    Route::POST('calc/price', 'LeagueRankController@index');
+    Route::get('/', function () {
+        return view('app.index');
+    });
 
-  Route::get('/calc', function(){
-    return view('app.price');
-  });
-
+    Route::get('/calc', function () {
+        return view('app.price');
+    });
+    Route::get('/boost', function () {
+        return view('app.boost');
+    });
+    Route::get('/about', function () {
+        return view('app.about');
+    });
+});
+Route::group(['prefix' => 'auth'], function () {
+    Route::get('/login', function () {
+        return view('auth.login');
+    });
+    Route::get('/register', function () {
+        return view('auth.register');
+    });
 });
 
-
 Route::group(['prefix' => 'admin'], function () {
-  Route::get('/boosts', function () {
-      return view('admin.boosts');
-  });
+    Route::get('/boosts', function () {
+        return view('admin.boosts');
+    });
 
-  Route::get('/dashboard', function () {
-      return view('admin.dashboard');
-  });
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    });
 });
 
 

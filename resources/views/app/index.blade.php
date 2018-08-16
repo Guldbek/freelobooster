@@ -2,7 +2,7 @@
 @extends('app.layouts.app')
 
 @section('content')
-
+@yield('bodyId','index')
     <div class="row section" id="headSection">
       <div class="col col-sm-12" >
           <div class="headline">
@@ -107,5 +107,5 @@
           </div>
         </div>
       </div>
-
+      @include('app.layouts.footer')
 @endsection
