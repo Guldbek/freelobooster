@@ -2,7 +2,7 @@
 @extends('app.layouts.app')
 
 @section('content')
-<div id="boostWrapper">
+@section('bodyId',"boost");
   <div class="cont" id="rankselection">
       <div class="row">
         <div class="col-lg-6">
@@ -12,7 +12,7 @@
         <div class="list">
           <span class="currentrank" id="currentrank">Rank</span>
           <ul class="list__ul">
-            <li><a data-rank="0" href="">Bronze</a></li>
+            <li ><a data-rank="0" href="">Bronze</a></li>
             <li><a data-rank="1" href="">Silver</a></li>
             <li><a data-rank="2" href="">Gold</a></li>
             <li><a data-rank="3" href="">Platinum</a></li>
@@ -97,7 +97,7 @@
   <div class="container" id="pricing">
 
         <div class="col-lg-7">
-        <p>Placeholder for whatever</p>
+        <img class="thumbsUp" src="/images/thumbsUp.gif" alt="">
         </div>
 
       <div class="container col-lg-5">
@@ -154,5 +154,5 @@
         </div>
       </div>
     </div>
-  </div>
+    @include('app.layouts.footer')
 @endsection

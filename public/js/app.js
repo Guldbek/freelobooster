@@ -11341,7 +11341,6 @@ module.exports = __webpack_require__(45);
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -11353,9 +11352,18 @@ var Parallax = __webpack_require__(36);
 var ScrollReveal = __webpack_require__(37);
 window.sr = ScrollReveal();
 
-sr.reveal('#scene', { duration: 600, origin: 'bottom' });
-sr.reveal('#listContainer ul li', { duration: 600, origin: 'bottom' });
-sr.reveal('.review-text, .review-info', { duration: 600, origin: 'bottom' });
+sr.reveal('#scene', {
+  duration: 600,
+  origin: 'bottom'
+});
+sr.reveal('#listContainer ul li', {
+  duration: 600,
+  origin: 'bottom'
+});
+sr.reveal('.review-text, .review-info', {
+  duration: 600,
+  origin: 'bottom'
+});
 
 window.Vue = __webpack_require__(38);
 
@@ -11524,45 +11532,56 @@ $('select').on('change', function (e) {
   // Set text on currentrank hidden element
   $('.currentrank').text("this.value");
   // Animate select width as currentrank
-  $(this).animate({ width: $('.currentrank').width() + 'px' });
+  $(this).animate({
+    width: $('.currentrank').width() + 'px'
+  });
 });
 
 $('select').on('change', function (e) {
   // Set text on currentrank hidden element
   $('.selected-rank').text(this.value);
   // Animate select width as currentrank
-  $(this).animate({ width: $('.currentrank2').width() + 'px' });
+  $(this).animate({
+    width: $('.currentrank2').width() + 'px'
+  });
 });
 
 $('select').on('change', function (e) {
   // Set text on desiredrank hidden element
   $('.selected-rank').text(this.value);
   // Animate select width as desiredrank
-  $(this).animate({ width: $('.desiredrank').width() + 'px' });
+  $(this).animate({
+    width: $('.desiredrank').width() + 'px'
+  });
 });
 $('select').on('change', function (e) {
   // Set text on desiredrank2 hidden element
   $('.selected-rank').text(this.value);
   // Animate select width as desiredrank2
-  $(this).animate({ width: $('.desiredrank2').width() + 'px' });
+  $(this).animate({
+    width: $('.desiredrank2').width() + 'px'
+  });
 });
 $('select').on('change', function (e) {
   // Set text on desiredrank2 hidden element
   $('.selected-rank').text(this.value);
   // Animate select width as desiredrank2
-  $(this).animate({ width: $('.currentlp').width() + 'px' });
+  $(this).animate({
+    width: $('.currentlp').width() + 'px'
+  });
 });
 $('select').on('change', function (e) {
   // Set text on currentlp hidden element
   $('.selected-rank').text(this.value);
   // Animate select width as desiredlp
-  $(this).animate({ width: $('.desiredlp').width() + 'px' });
+  $(this).animate({
+    width: $('.desiredlp').width() + 'px'
+  });
 });
 
 /***/ }),
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
-
 
 window._ = __webpack_require__(13);
 

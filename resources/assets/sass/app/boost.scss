@@ -1,12 +1,12 @@
 $dark: #555;
 $color--primary: $green;
 
-#boostWrapper{
-  background-image:url('/images/bgpriceoverlay.png');
+#boost {
+  background-image: url("/images/bgpriceoverlay.png");
   text-align: center;
 }
-#rankselection {
 
+#rankselection {
   margin-top: 56px;
   min-height: 600px;
   display: flex;
@@ -16,29 +16,33 @@ $color--primary: $green;
 
   .row {
     width: 100%;
-    // background-color: rgba(200,200,200,0.8);
-    // padding:30px;
+    background-color: rgba(255,255,255,0.9);
+    padding-top: 130px;
+    padding-bottom: 130px;
+    margin-left: 80px;
+    margin-right: 80px;
   }
 }
 
 .typo {
-  font-size: 0.8em!important;
   font-weight: 700;
   font-family: 'Source Sans Pro', sans-serif;
-  // color: #585858;
-  color:$white;
+  color: $white;
   text-decoration: none;
+  color: $dark-blue;
 
   option {
     font-size: 1em!important;
+    background-color: rgba(200,200,200,0.8);
   }
 }
 
 .transition {
   transition: all 0.4s ease-in-out;
 }
+
 .wrapper {
-  font-size: 1.5em!important;
+  font-size: 1.3em!important;
 }
 
 .noshow {
@@ -54,7 +58,7 @@ $color--primary: $green;
     text-align: left;
     position: absolute;
     padding: 0;
-    top: 7px;
+    top: 6px;
     left: 0;
     display: none;
 
@@ -140,24 +144,27 @@ select {
     color: lighten($dark, 20%);
   }
 }
-.pricing-wrapper{
-  width:100%;
-  background-color: $dark-blue;
 
+.pricing-wrapper {
+  width: 100%;
+  background-color: $dark-blue;
 }
+
 #pricing {
   // margin-top:200px;
   min-height: 300px;
-  padding:0;
+  padding: 0;
   color: $white;
   width: 100%;
   text-align: left;
   display: flex;
   align-items: center;
-  padding-bottom:30px;
-  .total-price-btn{
+  padding-bottom: 30px;
 
+  .thumbsUp {
+    width: 400px;
   }
+
   .user-order {
     list-style: none;
     font-size: 1.3em;
@@ -193,28 +200,29 @@ select {
   }
 }
 
-
-#arrowdiv{
-  margin:0;
-  padding:0;
-  width:100%;
+#arrowdiv {
+  margin: 0;
+  padding: 0;
+  width: 100%;
   // background-color:red;
-  height:30px;
-  row{
+  height: 30px;
+
+  row {
     display: flex;
     flex-direction: column;
   }
-
 }
-.test-div-1{
-  background:$dark-blue;
-  height:30px;
+
+.test-div-1 {
+  background: $dark-blue;
+  height: 30px;
   -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 95%, 20% 0);
   clip-path: polygon(0 0, 0 100%, 0 100%, 100% 100%, 95% 0);
 }
-.test-div-2{
-  background:$dark-blue;
-  height:30px;
+
+.test-div-2 {
+  background: $dark-blue;
+  height: 30px;
   -webkit-clip-path: polygon(0 0, 10% -95%, 0 100%, 100% 100%, 100% 0);
-  clip-path:polygon(0 0, 10% -95%, 0 100%, 100% 100%, 100% 0);
+  clip-path: polygon(0 0, 10% -95%, 0 100%, 100% 100%, 100% 0);
 }
