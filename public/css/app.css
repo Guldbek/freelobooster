@@ -10707,7 +10707,7 @@ h3 {
 #catcherSection:before {
   content: '';
   position: absolute;
-  top: -10%;
+  top: -5%;
   left: 0;
   -webkit-transform-origin: top;
           transform-origin: top;

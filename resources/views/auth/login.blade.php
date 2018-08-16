@@ -1,5 +1,6 @@
 @extends('app.layouts.app')
 @section('content')
+
 <div class="container login-container">
     <div class="row">
         <div class="col-md-12">
