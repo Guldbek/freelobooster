@@ -14,7 +14,7 @@ class LeagueRankController extends Controller
      */
     public function index()
     {
-        //
+      
     }
 
     public function makeRanks() {

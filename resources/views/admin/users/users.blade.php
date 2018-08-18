@@ -9,7 +9,8 @@
         <th scope="col">Email</th>
         <th scope="col">Role</th>
         <th scope="col">Registerd</th>
-        <th scope="col"></th>
+        <th scope="col">Action</th>
+
       </tr>
     </thead>
     <tbody>

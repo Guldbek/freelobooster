@@ -11,7 +11,8 @@
         <th scope="col">Booster group</th>
         <th scope="col">Percentage</th>
         <th scope="col">Booster since</th>
-        <th scope="col"></th>
+        <th scope="col">Action</th>
+
       </tr>
     </thead>
     <tbody>

@@ -12,6 +12,7 @@
         <th scope="col">Rank from</th>
         <th scope="col">Rank to</th>
         <th scope="col">Created at</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>

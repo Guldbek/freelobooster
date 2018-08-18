@@ -1,24 +1,41 @@
+body {
+  overflow-x: hidden;
+}
 
-#menu {
-  height: auto !important;
-  background-color: rgba(58, 140, 182, 0.75);
+.header {
+  background-color: rgba(58, 140, 182, 1);
 
-  .user{
-    color:#c6c6c6;
-  }
-  .danger{
-    color:$red;
-  }
-  color: white;
-  .brand-title{
-    color: $white;
-  }
-  .nav {
-    .nav-item{
-      .nav-link:not(.user,.danger) {
-        color: $white;
+  #menu {
+    width: 100%;
+    height: auto !important;
+    background-color: rgba(58, 140, 182, 1);
+
+    .white {
+      color: white;
+    }
+
+    .user {
+      color: #c6c6c6;
+    }
+
+    .danger {
+      color: $red;
+    }
+
+    .brand-title {
+      color: $white;
+    }
+
+    .nav {
+      .nav-item {
+        .nav-link:not(.user, .danger) {
+          color: $white;
+        }
       }
+    }
 
+    .nav-divider {
+      height: 100%;
     }
   }
 }
@@ -26,29 +43,36 @@
 .parallax-window {
   min-height: 600px;
   background: transparent;
-
 }
+
 .parallax-mirror {
   padding-top: 9rem;
 }
-
 // Typografi
 body {
   font-family: 'Cabin', sans-serif;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
 }
-h1{
+
+h1 {
   font-size: 2.6rem;
 }
-h2{
+
+h2 {
   color: $blue;
   font-size: 2.3rem;
 }
-h3{
+
+h3 {
   color: $blue;
   font-size: 2rem;
-
 }
