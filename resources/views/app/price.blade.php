@@ -29,5 +29,5 @@
 
   </div>
 </div>
-
+@include('app.layouts.footer')
 @endsection
