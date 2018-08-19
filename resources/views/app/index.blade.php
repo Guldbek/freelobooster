@@ -3,7 +3,8 @@
 
 @section('content')
 @yield('bodyId','index')
-    <div class="row section" id="headSection">
+  <div id="headSection">
+  <div class="row section">
       <div class="col col-sm-12" >
           <div class="headline">
             <h1 class="">FreeloBOOSTING</h1>
