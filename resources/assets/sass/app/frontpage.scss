@@ -1,10 +1,10 @@
-
 #footer {
   color: white;
   background-color: black;
   height: 24px;
 }
 /// SECTION SETTINGS
+
 .section {
   position: relative;
   overflow: hidden;
@@ -13,6 +13,7 @@
   padding-bottom: 80px;
 }
 //----------------------------- SECTIONS -------------------------------------//
+
 #headSection {
   background-image: url("/images/bgpriceoverlay.png");
   height: 600px;
@@ -34,7 +35,6 @@
   }
 
   .headImage {
-    margin-top: 100px;
     display: flex;
     justify-content: center;
   }

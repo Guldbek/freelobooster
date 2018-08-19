@@ -10562,8 +10562,6 @@ h3 {
 
 #headSection {
   background-image: url("/images/bgpriceoverlay.png");
-  background-repeat: no-repeat;
-  background-origin: center;
   height: 600px;
 }
 
@@ -10588,7 +10586,6 @@ h3 {
 }
 
 #headSection .headImage {
-  margin-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
