@@ -4,7 +4,6 @@
   height: 24px;
 }
 /// SECTION SETTINGS
-
 .section {
   position: relative;
   overflow: hidden;
@@ -12,6 +11,32 @@
   padding-top: 80px;
   padding-bottom: 80px;
 }
+
+//TOP SECTION
+.index-header {
+  padding-top: 56px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  h1 {
+    font-size: 3rem;
+    color: $white;
+  }
+
+  p {
+    color: $white;
+    font-size: 1.5rem;
+  }
+}
+
+.index-bg-pic{
+  background-image: url("/images/bgpriceoverlay.png");
+}
+
+
 //----------------------------- SECTIONS -------------------------------------//
 
 #headSection {
@@ -86,11 +111,7 @@
 #reviewSection {
   background: $dark-blue;
 
-  .container {
-    margin-top: -5rem;
-  }
-
-  h1 {
+h1 {
     color: $white;
     font-size: 3rem;
   }
@@ -110,18 +131,17 @@
   margin-right: 10rem;
 }
 
-.catcherSection {
-  padding: 0!important !important;
-}
 
 #catcherSection {
   z-index: -1;
   position: relative;
-  // width:100%;
+  .catcherSection {
+    padding: 0!important !important;
+  }
+
   .dimmer {
     background-color: rgba(40,167,69, 0.8);
     position: absolute;
-    // top: -5rem;
     top: -65%;
     height: 200%;
     width: 100%;
@@ -130,6 +150,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
   }
 
   .dimmer-btn {
@@ -139,34 +160,13 @@
   .catcherTitle {
     font-size: 4rem;
     color: $white;
-    margin-bottom: -1rem;
+    margin-bottom:-20px;
+  }
+  .catcherBody{
+    text-align: center;
+    margin-top:200px;
   }
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: -5%;
-    left: 0;
-    transform-origin: top;
-    transform: skewY(-3deg);
-    width: 100%;
-    height: 20%;
-    background: $white;
-    z-index: 5;
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: 60%;
-    left: 0;
-    transform-origin: left bottom;
-    transform: skewY(5deg);
-    width: 100%;
-    height: 40%;
-    background: $dark-blue;
-    z-index: 4;
-  }
 
   .whitebtn {
     color: $dark-blue;
@@ -175,8 +175,11 @@
     border-bottom: 0.3rem solid $dark-blue;
   }
 }
-
+.parallax-mirror{
+  background-color:white;
+}
 #contactSection {
+  background-color:white;
   background-image: url("/images/contact_background.png");
   background-position: bottom right;
   background-repeat: no-repeat;

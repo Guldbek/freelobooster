@@ -1,0 +1,26 @@
+#arrowdiv {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  // background-color:red;
+  height: 30px;
+
+  row {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.arrow-1 {
+  background-color: $white;
+  height: 30px;
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 95%, 20% 0);
+  clip-path: polygon(0 0, 0 100%, 0 100%, 100% 100%, 95% 0);
+}
+
+.arrow-2 {
+  background-color: $white;
+  height: 30px;
+  -webkit-clip-path: polygon(0 0, 10% -95%, 0 100%, 100% 100%, 100% 0);
+  clip-path: polygon(0 0, 10% -95%, 0 100%, 100% 100%, 100% 0);
+}

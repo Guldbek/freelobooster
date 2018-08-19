@@ -41,12 +41,15 @@ body {
 }
 
 .parallax-window {
-  min-height: 600px;
+  min-height: 400px;
   background: transparent;
+  -webkit-clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 39%, 100% 0);
+clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 39%, 100% 0);
 }
 
 .parallax-mirror {
-  padding-top: 9rem;
+  padding-top: 9rem;-webkit-clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 39%, 100% 0);
+clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 39%, 100% 0);
 }
 // Typografi
 body {
