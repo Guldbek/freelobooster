@@ -11,13 +11,12 @@
   padding-top: 80px;
   padding-bottom: 80px;
 }
-
 //TOP SECTION
 .index-header {
-  padding-top: 56px;
+  position:relative;
+  padding-top:130px;
   height: 500px;
   display: flex;
-  justify-content: center;
   align-items: center;
   text-align: center;
   flex-direction: column;
@@ -31,47 +30,27 @@
     font-size: 1.5rem;
   }
 }
+  .tt{
+    max-height: 600px;
+  }
 
-.index-bg-pic{
-  background-image: url("/images/bgpriceoverlay.png");
-}
+
 
 
 //----------------------------- SECTIONS -------------------------------------//
-
-#headSection {
-  background-image: url("/images/bgpriceoverlay.png");
-  height: 600px;
-
-  .headline {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-
-  h1 {
-    padding-top: 140px;
-    color: $blue;
-    text-shadow: 1px 1px 3px $dark-blue;
-  }
-
-  .danger {
-    color: $red;
-  }
-
-  .headImage {
-    display: flex;
-    justify-content: center;
-  }
+.list-img-cont{
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
-
 #listSection {
-  background-color: $white;
-
+  background-color: $dark-blue;
+  padding-bottom:30px;
   #listContainer {
+
     .list {
       padding-left: 0;
-
+      color:$white;
       h3 {
         text-transform: capitalize;
         padding-bottom: 0.5rem;
@@ -83,6 +62,7 @@
         margin-top: 0.8rem;
         font-size: 1.3rem;
 
+
         p {
           display: inline-block;
           margin-left: 1rem;
@@ -90,7 +70,7 @@
 
         .fa-angle-right {
           margin-left: 1rem;
-          color: $dark-blue;
+          color: $white;
         }
 
         .list-image {
@@ -109,15 +89,14 @@
 }
 
 #reviewSection {
-  background: $dark-blue;
-
+background-color:$white;
 h1 {
-    color: $white;
+    color: $blue;
     font-size: 3rem;
   }
 
   p {
-    color: $white;
+    color: $black;
     font-style: italic;
   }
 
@@ -167,48 +146,61 @@ h1 {
     margin-top:200px;
   }
 
-
-  .whitebtn {
-    color: $dark-blue;
-    background-color: white;
-    text-shadow: 0 1px 0 $dark-blue;
-    border-bottom: 0.3rem solid $dark-blue;
-  }
 }
 .parallax-mirror{
   background-color:white;
 }
-#contactSection {
-  background-color:white;
-  background-image: url("/images/contact_background.png");
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  margin-left: 0;
-  @media screen and (max-width: 991px) {
-    #contactSection {
-      background-size: 50%;
-    }
-  }
 
+// ----- CONTACT ---- ///
+#contactSection {
+  background-color:$white;
+  background-image:url('/images/forest.jpg');
+  // background-size:500px auto;
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size:cover;
+  margin-left: 0;
+  padding-bottom:0;
+  padding-top:0;
+  text-align:center;
   .contactTitle {
-    color: $dark-blue;
+  color: $white;
     font-size: 3rem;
   }
-
-  .contactText {
-    color: $dark-blue;
-    font-size: 1.4rem;
-    width: 60%;
+  .contactbody{
+    color: $white;
+    padding-top:70px;
+    font-size:1.1em;
   }
+
 }
 //----------------------------- FOOTER -------------------------------------//
-
+.footer-cont{
+  display:flex;
+  flex-direction: column;
+  background-color: rgb(20, 20, 20);
+}
+.some-icon a, .some-icon a:active,.some-icon a:focus{
+  color:$white;
+}
+.some-icon a:hover{
+  color:darken($white, 40%);
+}
+.some-footer{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color:inherit;
+  padding-bottom:10px;
+  $light-grey-new: lighten(rgb(150,150,150),10%);
+  color:$light-grey-new;
+}
 #footerSection {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: rgb(20, 20, 20);
+  padding-bottom:20px;
 
   hr {
     background-color: $dark-green;
@@ -227,11 +219,9 @@ h1 {
 }
 
 #footer {
-  // padding-top:1.7rem;
   position: relative;
   display: flex;
-  // justify-content: center;
-  // align-items: center;
+
   text-align: center;
 
   p {
@@ -239,4 +229,56 @@ h1 {
     margin-top: -0.2rem;
     margin-bottom: -1rem;
   }
+}
+
+// ------- FEATURES -------- //
+.modal-row{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align:center;
+  padding:0;
+  margin:0;
+}
+.info_graphic {
+  background-color:$white;
+  clear: both;
+  z-index: 99;
+.col-sm-4{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  text-align: center;
+}
+
+}
+.featurewrap{
+  padding:0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color:$white;
+}
+.info_graphic .info_square {
+    color: $black;
+    line-height: 1.45;
+    font-weight: 400;
+}
+.header_title_style {
+    margin-bottom:-3px;
+    font-size: 35px;
+    font-weight: 400;
+    color: $blue;
+
+}
+.icon{
+  color:$blue;
+  font-size:2em;
+}
+.info_graphic .info_square .info_text {
+    width: 95%;
+    margin-left: 5%;
+    font-size: 18px;
+    margin-bottom: 50px;
 }

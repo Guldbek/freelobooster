@@ -1,7 +1,11 @@
 body {
   overflow-x: hidden;
 }
-
+.index-bg-pic{
+  background-repeat: no-repeat;
+  background-image: url("/images/ashe.jpg");
+  background-size: cover;
+}
 .header {
   background-color: rgba(58, 140, 182, 1);
 
@@ -62,6 +66,7 @@ h3,
 h4,
 h5,
 h6 {
+  color:$blue;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
 }

@@ -16,11 +16,9 @@
 // });
 
 Route::group(['prefix' => 'app'], function () {
-    Route::POST('calc/price', 'LeagueRankController@index');
     Route::get('/', function () {
         return view('app.index');
-    });
-
+    });  
     Route::get('/calc', function () {
         return view('app.price');
     });
