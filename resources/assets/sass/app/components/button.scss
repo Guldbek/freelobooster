@@ -6,7 +6,7 @@
   padding: 0 15px;
   border-radius: 7px;
   border: 0;
-  border-bottom: 0.3rem solid $dark-green;
+  border-bottom: 5px solid $dark-green;
   font-size: 0.9rem;
   font-weight: 400;
   text-transform: uppercase;
@@ -17,4 +17,13 @@
   color: $white;
   background: $green;
   text-shadow: 0 1px 3px $dark-green;
+}
+.butttton:hover {
+background-color: #3e8e41
+}
+.butttton:active {
+  transition:border 2s;
+  background-color: #3e8e41;
+  border-bottom:none;
+  // transform: translateY(1px);
 }
