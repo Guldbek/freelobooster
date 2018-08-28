@@ -1,7 +1,7 @@
 <header class="header">
    <nav id="menu" class="navbar navbar-expand-lg navbar-light container-fluid fixed-top">
       <div class="container">
-         <a class="navbar-brand brand-title mr-auto" href="#">FreeloBooster</a>
+         <a class="navbar-brand brand-title mr-auto unselectable" draggable="false" (dragstart)="false;" href="/app"><img  draggable="false" (dragstart)="false;" class="img-fluid logo unselectable" src="{{ asset('images/logo.png') }}"/></a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
          </button>

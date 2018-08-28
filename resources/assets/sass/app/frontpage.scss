@@ -1,8 +1,4 @@
-#footer {
-  color: white;
-  background-color: black;
-  height: 24px;
-}
+
 /// SECTION SETTINGS
 .section {
   position: relative;
@@ -34,8 +30,50 @@
     max-height: 600px;
   }
 
+// ------------------ CATCHER ---------------- //
+#catcher{
+  width:100%;
+  padding:0;
+  height:400px;
+  background-image:url('/images/catcher.png');
+  background-attachment: fixed;
+  background-position:0% -300%;
+  background-repeat: no-repeat;
+  background-size: cover;
 
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 40%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 40%);
+}
+.dimmer{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color:rgba(46,146,69,0.6);
+  width:100%;
+  height:100%;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 40%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 40%);
+}
+.dimmer-btn{
 
+}
+.catcherbody{
+  display:flex;
+  text-align: center;
+  flex-direction:column;
+  align-items:center;
+
+  h1{
+    color:$white;
+  }
+}
+
+@media only screen and (max-device-width: 1366px) {
+    #catcher {
+        background-attachment: scroll;
+    }
+}
 
 //----------------------------- SECTIONS -------------------------------------//
 .list-img-cont{
@@ -110,67 +148,52 @@ h1 {
   margin-right: 10rem;
 }
 
+//
+// #catcherSection {
+//   z-index: -1;
+//   .parallax-window{
+//     background-color:rgba(40,167,69,0.8);
+//     display:flex;
+//     justify-content: center;
+//     align-items: center;
+//     text-align: center;
+//   }
+//   .dimmer-btn {
+//     margin-top: 3rem;
+//   }
+//
+//   .catcherTitle {
+//     font-size: 4rem;
+//     margin-bottom:-30px;
+//   }
+//   .catcherBody{
+//     text-align: center;
+//     color:$white;
+//   }
+// }
 
-#catcherSection {
-  z-index: -1;
-  position: relative;
-  .catcherSection {
-    padding: 0!important !important;
-  }
-
-  .dimmer {
-    background-color: rgba(40,167,69, 0.8);
-    position: absolute;
-    top: -65%;
-    height: 200%;
-    width: 100%;
-    display: flex;
-    left: 0;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-  }
-
-  .dimmer-btn {
-    margin-top: 3rem;
-  }
-
-  .catcherTitle {
-    font-size: 4rem;
-    color: $white;
-    margin-bottom:-20px;
-  }
-  .catcherBody{
-    text-align: center;
-    margin-top:200px;
-  }
-
-}
-.parallax-mirror{
-  background-color:white;
-}
 
 // ----- CONTACT ---- ///
 #contactSection {
   background-color:$white;
-  background-image:url('/images/forest.jpg');
-  // background-size:500px auto;
+  background-image:url('/images/riven.png');
   background-repeat: no-repeat;
-  background-position:center;
   background-size:cover;
   margin-left: 0;
   padding-bottom:0;
   padding-top:0;
   text-align:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .contactTitle {
   color: $white;
     font-size: 3rem;
   }
   .contactbody{
+    padding:10px;
     color: $white;
-    padding-top:70px;
-    font-size:1.1em;
+    font-size:1.3em;
   }
 
 }

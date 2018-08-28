@@ -3,6 +3,7 @@ $color--primary: $green;
 
 #rankselection{
   padding-top:56px;
+
   .header-cont{
     display:flex;
     flex-direction: row;
@@ -76,6 +77,18 @@ $color--primary: $green;
   background-color:$blue;
   .order-row h1{
     color:$white;
+  }
+
+}
+.order-list{
+  list-style:none;
+  color:white;
+  font-size:1.3em;
+  span{
+    color:$white;
+  }
+  .green  {
+    color:rgb(24, 198, 17);
   }
 
 }

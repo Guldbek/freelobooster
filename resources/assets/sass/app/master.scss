@@ -1,9 +1,18 @@
 body {
   overflow-x: hidden;
 }
+#featurewrap{
+  min-height:381px;
+}
+#footer {
+  color: grey;
+  background-color: black;
+  font-size:12px;
+  height: 24px;
+}
 .index-bg-pic{
   background-repeat: no-repeat;
-  background-image: url("/images/ashe.jpg");
+  background-image: url("/images/ashe.png");
   background-size: cover;
 }
 .header {
@@ -44,17 +53,18 @@ body {
   }
 }
 
-.parallax-window {
-  min-height: 400px;
-  background: transparent;
-  -webkit-clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 39%, 100% 0);
-clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 39%, 100% 0);
-}
 
-.parallax-mirror {
-  padding-top: 9rem;-webkit-clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 39%, 100% 0);
-clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 39%, 100% 0);
-}
+// .parallax-window {
+//   min-height: 400px;
+//   background: transparent;
+//   -webkit-clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 39%, 100% 0);
+// clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 39%, 100% 0);
+// }
+//
+// .parallax-mirror {
+//   padding-top: 9rem;-webkit-clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 39%, 100% 0);
+// clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 39%, 100% 0);
+// }
 // Typografi
 body {
   font-family: 'Cabin', sans-serif;

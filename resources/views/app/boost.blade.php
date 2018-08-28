@@ -34,57 +34,59 @@
           </div>
           <div class="col-lg-12">
             <div class="c_rank">
-              <form class="" id="currentRank">
+              <form method="post" action="price" class="" id="currentRank">
+                {{csrf_field()}}
                 <label for="c_tier">Current tier</label>
-                <select v-model="tier" class="" name="" id="c_tier">
+                <select v-model="tier" class="" name="tier" id="c_tier">
                   <optgroup label="Select your tier">
-                    <option value="">Bronze</option>
-                    <option value="">Silver</option>
-                    <option value="">Gold</option>
-                    <option value="">Platinum</option>
-                    <option value="">Diamond</option>
+                    <option value="1">Bronze</option>
+                    <option value="2">Silver</option>
+                    <option value="3">Gold</option>
+                    <option value="4">Platinum</option>
+                    <option value="5">Diamond</option>
+                    <option value="6">Master</option>
                   </optgroup>
                 </select>
             </div>
             <div class="c_division">
             <label for="c_division">Current divison</label>
-            <select class="" v-model="division" name="" id="c_division">
+            <select class="" v-model="division" name="division" id="c_division">
             <optgroup label="Select your Divison">
-            <option value="">I</option>
-            <option value="">II</option>
-            <option value="">III</option>
-            <option value="">IV</option>
-            <option value="">V</option>
+            <option value="1">I</option>
+            <option value="2">II</option>
+            <option value="3">III</option>
+            <option value="4">IV</option>
+            <option value="5">V</option>
             </optgroup>
             </select>
             </div>
             <div class="c_lp">
             <label for="c_lp">Current amount of LP</label>
-            <select class="" v-model="lp" name="" id="c_lp">
+            <select class="" v-model="lp" name="lp" id="c_lp">
             <optgroup label="Your amount of LP">
-            <option value="">0-20</option>
-            <option value="">20-40</option>
-            <option value="">40-60</option>
-            <option value="">60-80</option>
-            <option value="">80-100</option>
+            <option value="1">0-20</option>
+            <option value="2">20-40</option>
+            <option value="3">40-60</option>
+            <option value="4">60-80</option>
+            <option value="5">80-100</option>
             </optgroup>
             </select>
             </div>
             <div class="c_region">
             <label for="c_lp">Current region</label>
-            <select class="" v-model="region"  name="" id="c_region" data-live-search="true">
+            <select class="" v-model="region"  name="region" id="c_region" data-live-search="true">
             <optgroup label="Select your region">
-            <option value="">EU West</option>
-            <option value="">EU Nordic/East</option>
-            <option value="">North America</option>
-            <option value="">Latin America North</option>
-            <option value="">Latin America South</option>
-            <option value="">Brazil</option>
-            <option value="">Japan</option>
-            <option value="">Russia</option>
-            <option value="">Turkey</option>
-            <option value="">Oceania</option>
-            <option value="">Republic of Korea</option>
+            <option value="1">EU West</option>
+            <option value="2">EU Nordic/East</option>
+            <option value="3">North America</option>
+            <option value="4">Latin America North</option>
+            <option value="5">Latin America South</option>
+            <option value="6">Brazil</option>
+            <option value="7">Japan</option>
+            <option value="8">Russia</option>
+            <option value="9">Turkey</option>
+            <option value="10">Oceania</option>
+            <option value="11">Republic of Korea</option>
             </optgroup>
             </select>
             </div>
@@ -99,37 +101,38 @@
       </div>
       <div class="col-lg-12">
       <div class="c_rank">
-      <label for="c_tier">Current tier</label>
-      <select class="" name="" id="c_tier">
+      <label for="c_tier">Desired tier</label>
+      <select class="" name="d_tier">
       <optgroup label="Select your tier">
-      <option value="">Bronze</option>
-      <option value="">Silver</option>
-      <option value="">Gold</option>
-      <option value="">Platinum</option>
-      <option value="">Diamond</option>
+      <option value="1">Bronze</option>
+      <option value="2">Silver</option>
+      <option value="3">Gold</option>
+      <option value="4">Platinum</option>
+      <option value="5">Diamond</option>
+      <option value="6">Master</option>
       </optgroup>
       </select>
       </div>
       <div class="c_division">
-      <label for="c_division">Current divison</label>
-      <select class="" v-model="test" name="" id="c_division">
+      <label for="c_division">Desired divison</label>
+      <select class="" v-model="test" name="d_division">
       <optgroup label="Select your Divison">
-      <option value="">I</option>
-      <option value="">II</option>
-      <option value="">III</option>
-      <option value="">IV</option>
-      <option value="">V</option>
+      <option value="1">I</option>
+      <option value="2">II</option>
+      <option value="3">III</option>
+      <option value="4">IV</option>
+      <option value="5">V</option>
       </optgroup>
       </select>
       <div class="checkboxes" id="checkboxes">
       <label for="fdelivery">I want 2x speed (+50% cost)
-      <input type="checkbox" v-model="checked" id="fdelivery" name="delivery" value="1">
+      <input type="checkbox" v-model="checked" id="fdelivery" name="EP" value="1">
       </label>
       <label for="schamp">Use a specific champion (+20% cost)
-      <input type="checkbox" v-model="checked" id="schamp" name="delivery" value="2">
+      <input type="checkbox" v-model="checked" id="schamp" name="SC" value="1">
       </label>
       </div>
-      <button type="button" name="button" class="butttton btn-left total-price-btn ">Buy now</button>
+      <input type="submit" class="butttton btn-left total-price-btn ">
       </form>
       </div>
       </div>
@@ -148,9 +151,12 @@
       <div class="row order-row">
         <div class="col-lg-12">
           <h1 class="order-title">Your order:</h1>
-          <ul>
-            <li>Division Boost: </li>
-            <li>Total cost: </li>
+          <ul class="order-list">
+            <li><span>Division Boost:</span> Bronze III 80-100 lp <i class="fa fa-arrow-right"></i> Silver II</li>
+            <li><span>Region:</span> Brazil</li>
+            <li><span>Express Delivery:</span> +50%</li>
+            <li><span>Specific champion:</span> Quinn +20%</li>
+            <li><span>Total cost: <span class="green">(318,5$ +70%) 450$</span></li>
           </ul>
         </div>
       </div>
