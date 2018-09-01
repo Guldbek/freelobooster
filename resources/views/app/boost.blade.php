@@ -162,6 +162,7 @@
       </div>
     </div>
   </div>
+</form>
 </div>
 </div>
 @include('app.layouts.footer')

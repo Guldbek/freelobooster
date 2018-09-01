@@ -9,6 +9,12 @@
          <!-- <img  draggable="false" (dragstart)="false;" class="img-fluid tt img-overlap-headerpic unselectable" src="{{ asset('images/headimage.jpg') }}"/> -->
       </div>
    </div>
+   <div class="test-container" id="arrowdiv">
+     <div class="row">
+       <div class="col-sm-6 arrow-1"></div>
+       <div class="col-sm-6 arrow-2"></div>
+     </div>
+   </div>
 </div>
 <div class="col-lg-12 featurewrap">
    <div class="section" id="featuresSection">
@@ -82,10 +88,8 @@
       <div class="container">
          <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-6" id="listContainer">
-               <h3>
-               Boosting with
-               <h3>
-               <h3>customer service in focus</h3>
+               <h3 class="listTitle">Boosting with</h3>
+               <h3 class="listTitle">customer service in focus</h3>
                <ul class="list">
                   <li>
                      <i class="fas fa-angle-right"></i>

@@ -10,7 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -28,6 +27,7 @@ Route::group(['prefix' => 'app'], function () {
     Route::get('/about', function () {
         return view('app.about');
     });
+
     Route::POST('/price', function () {
         $tier = $_POST['tier'];
         $division = $_POST['division'];
