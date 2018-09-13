@@ -32,9 +32,9 @@
       </div>
     </div>
     <div class="col-lg-12 some-footer some-icon">
-      <a href="http://wwww.facebook.com" rel="nofollow"><i class="fab fa-facebook"></i></a>
-      <a href="http://www.twitter.com" rel="nofollow"><i class="fab fa-twitter"></i></a>
-      <a href="http://www.instagram.com" rel="nofollow"><i class="fab fa-instagram"></i></a>
+      <a href="http://wwww.facebook.com" rel="nofollow"><i class="someicon fab fa-facebook"></i></a>
+      <a href="http://www.twitter.com" rel="nofollow"><i class="someicon fab fa-twitter"></i></a>
+      <a href="http://www.instagram.com" rel="nofollow"><i class="someicon fab fa-instagram"></i></a>
     </div>
   </div>
 
