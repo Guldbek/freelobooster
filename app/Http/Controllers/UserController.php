@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Booster_group;
 use Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -56,7 +57,7 @@ class UserController extends Controller
     $users = User::all();
 
     Session::flash('message', 'User '.$user->name.' succesfully addeed!');
-    
+
     // redirect
     return redirect('admin/users');
   }
@@ -69,7 +70,16 @@ class UserController extends Controller
   */
   public function show(User $user)
   {
-    //
+    $user = $user::where('id', '=', $user->id)->with(['boosterJobs', 'userJobs', 'orders', 'booster', 'booster.boosterGroup'])->first();
+
+    $boosterGroups = Booster_group::all();
+
+    $data = [
+      'user' => $user,
+      'boostergroups' => $boosterGroups
+    ];
+
+    return view('admin.users.profile', compact('data'));
   }
 
   /**
@@ -92,7 +102,11 @@ class UserController extends Controller
   */
   public function update(Request $request, User $user)
   {
-    //
+    $user->update(Request::all());
+
+    Session::flash('message', 'User succesfully updated!');
+
+    return back();
   }
 
   /**

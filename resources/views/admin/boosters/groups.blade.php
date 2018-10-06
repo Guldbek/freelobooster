@@ -17,12 +17,14 @@
     </thead>
     <tbody>
       @foreach($booster_groups as $booster_group)
+        <tr>
         <th scope="row">{{  $booster_group->name }}</th>
         <td>{{ $booster_group->payment_percentage }}</td>
         <td><a href="/admin/rank/{{$booster_group->id}}" >{{ $booster_group['rankFrom']->rank }}</a></td>
         <td><a href="/admin/rank/{{$booster_group->id}}" >{{ $booster_group['rankTo']->rank }}</a></td>
         <td>{{ $booster_group->created_at }}</td>
         <td><a href="/admin/booster/group/{{$booster_group->id}}">See group</a></td>
+      </tr>
       @endforeach
     </tbody>
   </table>

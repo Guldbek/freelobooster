@@ -41,8 +41,11 @@ Route::group(['prefix' => 'admin'], function () {
   Route::get('/users', 'UserController@index');
   Route::get('/user/create', 'UserController@create');
   Route::post('/user/store', 'UserController@store');
-  Route::post('/user/delete/{user}', 'UserController@destroy');
+  Route::delete('/user/delete/{user}', 'UserController@destroy');
+  Route::get('/user/{user}', 'UserController@show');
+  Route::put('/user/{user}', 'UserController@update');
 
+  Route::put('/booster/{booster}', 'BoosterController@store');
 
 });
 Route::group(['prefix' => 'auth'], function () {

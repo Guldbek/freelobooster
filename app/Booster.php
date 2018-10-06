@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Booster extends Model
 {
+  protected $guarded = [];
+
+
    public function user(){
      return $this->belongsTo('App\User');
    }
@@ -20,11 +23,9 @@ class Booster extends Model
 
 
    public function getSumOfPercentage() {
-
     $boosterGroupPercentage = $this->boosterGroup->payment_percentage;
     $userPercentage = $this->payment_discount;
     return $boosterGroupPercentage + $userPercentage;
-
    }
 
 }

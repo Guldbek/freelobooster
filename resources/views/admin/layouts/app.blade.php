@@ -117,6 +117,7 @@
         </div>
     </div>
   </div>
+  @include('/admin/modal') 
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

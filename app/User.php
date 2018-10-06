@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'role'
     ];
 
     /**
@@ -27,6 +27,21 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function boosterJobs(){
+      return $this->hasMany('App\Job', 'booster_id');
+    }
+
+    public function userJobs(){
+      return $this->hasMany('App\Job', 'user_id');
+    }
+
+    public function orders(){
+      return $this->hasMany('App\Order');
+    }
+
+    public function booster(){
+      return $this->hasOne('App\Booster');
+    }
 
     public function getUserRoleName(){
         switch ($this->role) {
@@ -46,7 +61,6 @@ class User extends Authenticatable
             return 'User';
             break;
         }
-
     }
 
     public function auctionEndDate()
