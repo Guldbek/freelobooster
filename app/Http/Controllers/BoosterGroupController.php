@@ -14,7 +14,9 @@ class BoosterGroupController extends Controller
      */
     public function index()
     {
-        //
+      $booster_groups = Booster_group::with('rankTo', 'rankFrom')->get();
+      return view('admin.boosters.groups', compact('booster_groups'));
+
     }
 
     /**

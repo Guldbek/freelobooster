@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -10,20 +9,35 @@ const Parallax = require('./parallax.min.js');
 const ScrollReveal = require('ScrollReveal');
 window.sr = ScrollReveal();
 
-sr.reveal('#scene', { duration: 600, origin: 'bottom' });
-sr.reveal('#listContainer ul li', { duration: 600, origin: 'bottom' });
-
-
-window.Vue = require('vue');
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-
-const app = new Vue({
-    el: '#app'
+sr.reveal('.reviewcontainer', {
+  duration: 900,
+  origin: 'top'
 });
+sr.reveal('.dimmer-btn', {
+  duration: 900,
+  origin: 'bottom'
+});
+sr.reveal('.list-item', {
+  duration: 900,
+  origin: 'bottom'
+});
+
+
+
+var path = window.location.pathname;
+$('.navigation-menu').find('a').each(function() {
+  $(this).toggleClass('active', $(this).attr('href') == path);
+});
+
+//tjek om .anyClass eksisterer og fjern den (også selve tagget f.eks <p></p>).
+function removeDiv(nameOfClass) {
+  var className = "." + nameOfClass;
+  if ($(className)[0]) {
+    // hvis className exist
+    console.log(true)
+    $(className).remove(className);
+  } else {
+    // hvis classname ikke exist
+    console.log(false)
+  }
+}

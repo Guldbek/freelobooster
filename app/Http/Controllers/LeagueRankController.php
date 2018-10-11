@@ -14,7 +14,12 @@ class LeagueRankController extends Controller
      */
     public function index()
     {
-        //
+      
+    }
+
+    public function makeRanks() {
+      $league_rank = new League_rank;
+      $createRank = $league_rank->createLeagueRanks();
     }
 
     /**
@@ -37,7 +42,6 @@ class LeagueRankController extends Controller
     {
         //
     }
-
     /**
      * Display the specified resource.
      *

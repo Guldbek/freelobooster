@@ -1,20 +1,31 @@
-
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 @import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,600,600i');
-
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
-
 //Variables
 @import "variables";
-
-
 // ADMIN
+@import "admin/generel";
 
 
+
+
+  // Components
+  @import "admin/components/navbar";
+  @import "admin/components/sidebar";
+
+
+  // Pages
+  @import "admin/users";
 
 
 // APP
 @import "app/master";
 @import "app/frontpage";
+@import "app/boost";
+@import "app/about";
+@import "app/auth";
+@import "app/components/menu";
+@import "app/components/button";
+@import "app/components/arrow";

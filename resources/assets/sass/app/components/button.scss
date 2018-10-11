@@ -1,0 +1,28 @@
+.butttton {
+  white-space: nowrap;
+  display: inline-block;
+  height: 42px;
+  line-height: 2px;
+  padding: 0 15px;
+  border-radius: 7px;
+  border: 0;
+  border-bottom: 5px solid $dark-green;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  color: $white;
+  background: $green;
+  font-weight: bold;
+  width:122px;
+}
+.butttton:hover {
+
+}
+.butttton:active {
+  transition:border 2s;
+  border-bottom:none;
+}

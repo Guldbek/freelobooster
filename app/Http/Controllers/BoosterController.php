@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Booster;
+use Session;
 use Illuminate\Http\Request;
+use App\Http\Requests\BoosterUpdate;
 
 class BoosterController extends Controller
 {
@@ -14,7 +16,9 @@ class BoosterController extends Controller
      */
     public function index()
     {
-        //
+        $boosters = Booster::with('user', 'boosterGroup')->get();
+        return view('admin.boosters.boosters', compact('boosters'));
+
     }
 
     /**
@@ -24,7 +28,7 @@ class BoosterController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -33,9 +37,12 @@ class BoosterController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BoosterUpdate $request, Booster $booster)
     {
-        //
+      $booster->fill($request->all());
+      $booster->save();
+      Session::flash('message', 'Booster settings succesfully updated!');
+      return back();
     }
 
     /**

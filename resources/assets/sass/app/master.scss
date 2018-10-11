@@ -1,46 +1,96 @@
+body {
+  overflow-x: hidden;
+}
+#featurewrap{
+  min-height:381px;
+}
+#footer {
+  color: grey;
+  background-color: black;
+  font-size:12px;
+  height: 24px;
+}
+.index-bg-pic{
+  background-repeat: no-repeat;
+  background-image: url("/images/ashe.png");
+  background-size: cover;
+}
+.header {
+  background-color: rgba(58, 140, 182, 1);
 
-#menu {
-  height: auto !important;
-  background-color: rgba(58, 140, 182, 0.75);
-  color: white;
-  .brand-title{
-    color: white;
-  }
-  .nav {
-    .nav-item{
-      .nav-link {
-        color: white;
+  #menu {
+    width: 100%;
+    height: auto !important;
+    background-color: rgba(58, 140, 182, 1);
+
+    .white {
+      color: white;
+    }
+
+    .user {
+      color: #c6c6c6;
+    }
+
+    .danger {
+      color: $red;
+    }
+
+    .brand-title {
+      color: $white;
+    }
+
+    .nav {
+      .nav-item {
+        .nav-link:not(.user, .danger) {
+          color: $white;
+        }
       }
+    }
 
+    .nav-divider {
+      height: 100%;
     }
   }
 }
 
-.parallax-window {
-    min-height: 600px;
-    background: transparent;
-}
-.parallax-mirror {
-    padding-top: 15rem;
-}
 
+// .parallax-window {
+//   min-height: 400px;
+//   background: transparent;
+//   -webkit-clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 39%, 100% 0);
+// clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 39%, 100% 0);
+// }
+//
+// .parallax-mirror {
+//   padding-top: 9rem;-webkit-clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 39%, 100% 0);
+// clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 39%, 100% 0);
+// }
 // Typografi
 body {
   font-family: 'Cabin', sans-serif;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color:$blue;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
 }
-h1{
+
+h1 {
   font-size: 2.6rem;
 }
-h2{
+
+h2 {
   color: $blue;
   font-size: 2.3rem;
 }
-h3{
+
+h3 {
   color: $blue;
   font-size: 2rem;
-
 }

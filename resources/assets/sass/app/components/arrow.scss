@@ -1,0 +1,57 @@
+#arrowdiv{
+  .arrow-1{
+	height:0;
+	border-right: 50px solid transparent;
+	border-bottom: 30px solid $white;
+  }
+  .arrow-2{
+	height:0;
+  border-bottom: 30px solid $white;
+	border-left: 50px solid transparent;
+  }
+  }
+  @media only screen and (max-width: 575px) {
+    #arrowdiv{
+      .arrow-1{
+      	width: 50%;
+      	height:0;
+      	border-right: 50px solid transparent;
+      	border-bottom: 30px solid $white;
+      }
+      .arrow-2{
+      	width: 50%;
+      	height:0;
+        border-bottom: 30px solid $white;
+      	border-left: 50px solid transparent;
+        }
+      }
+  }
+#arrowdiv-reversed{
+  background-color:$blue;
+  .arrow-1{
+	height:0;
+  border-top: 20px solid $white;
+  border-right: 30px solid transparent;
+  }
+  .arrow-2{
+	height:0;
+  border-top: 20px solid $white;
+	border-left: 30px solid transparent;
+  }
+  }
+  @media only screen and (max-width: 575px) {
+    #arrowdiv-reversed{
+      .arrow-1{
+      	width: 50%;
+      	height:0;
+        border-top: 20px solid $white;
+        border-right: 30px solid transparent;
+      }
+      .arrow-2{
+      	width: 50%;
+      	height:0;
+        border-top: 20px solid $white;
+      	border-left: 30px solid transparent;
+        }
+      }
+  }

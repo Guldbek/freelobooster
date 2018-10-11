@@ -1,0 +1,94 @@
+$dark: #555;
+$color--primary: $green;
+
+#rankselection{
+  padding-top:56px;
+
+  .header-cont{
+    display:flex;
+    flex-direction: row;
+  }
+  .review-t{
+    margin-bottom:-2px;
+  }
+  .review-info,.review-text{
+    font-size:0.8em;
+  }
+  .review-text,.review-info{
+    font-style: italic;
+  }
+.header-text-cont{
+  color:$white;
+  text-align: left;
+
+.header-title{
+  color:$white;
+}
+.header-text{
+
+}
+}
+.header-review-cont{
+  color:$white;
+  display:flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+}
+}
+.rank-row{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  text-align: center;
+
+}
+#ranks{
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+  label{
+    width:100%;
+    text-align: left;
+    margin-left:24%;
+    margin-bottom:-5px;
+    color:rgba(0,0,0, 0.6);
+  }
+  select{
+  margin-bottom:10px;
+    width:50%;
+  }
+    .col-lg-3{
+      align-items: center;
+
+  }
+}
+.btn-left{
+    margin-left:31%;
+}
+.selectrank-title{
+  font-size:1.5em;
+  text-align: center;
+}
+.c_division,.c_rank,.c_lp{
+  width:100%;
+}
+#order-wrap{
+  background-color:$blue;
+  .order-row h1{
+    color:$white;
+  }
+
+}
+.order-list{
+  list-style:none;
+  color:white;
+  font-size:1.3em;
+  span{
+    color:$white;
+  }
+  .green  {
+    color:rgb(24, 198, 17);
+  }
+
+}
