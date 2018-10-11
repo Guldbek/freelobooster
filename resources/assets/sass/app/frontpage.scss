@@ -1,41 +1,4 @@
 
-#frontpage {
-
-}
-buttton--green
-// TESTING
-.butttton{
-  white-space: nowrap;
-  display: inline-block;
-  height: 2.6rem;
-  line-height: 2.6rem;
-  padding: 0 0.9rem;
-  border-radius:0.4rem;
-  border:0rem;
-  border-bottom:0.3rem solid $dark-green;
-  font-size: 0.9rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: .025em;
-  text-decoration: none;
-  -webkit-transition: all .15s ease;
-  transition: all .15s ease;
-  color: $white;
-  background: $green;
-  text-shadow: 0 1px 3px $dark-green;
-
-  &--green{
-  background-color: green;
-  }
-}
-
-
-#footer {
-  color: white;
-  background-color: black;
-  height: 24px;
-}
-
 /// SECTION SETTINGS
 .section {
   position: relative;
@@ -44,54 +7,113 @@ buttton--green
   padding-top: 80px;
   padding-bottom: 80px;
 }
-//----------------------------- SECTIONS -------------------------------------//
-#headSection {
-  background-image: url("/images/bgpriceoverlay.png");
-  // background-position:bottom;
-  background-repeat: no-repeat;
-  background-origin: center;
-  height: 600px;
-
-  .headline {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-
+//TOP SECTION
+.index-header {
+  position:relative;
+  padding-top:130px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
   h1 {
-    padding-top: 140px;
-    color: $blue;
-    text-shadow: 1px 1px 3px $dark-blue;
+    font-size: 3rem;
+    color: $white;
   }
 
-  .danger {
-    color: $red;
+  p {
+    color: $white;
+    font-size: 1.5rem;
+  }
+}
+  .tt{
+    max-height: 600px;
   }
 
-  .headImage {
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
+// ------------------ CATCHER ---------------- //
+#catcher{
+  width:100%;
+  padding:0;
+  height:400px;
+  background-image:url('/images/catcher.png');
+  background-attachment: fixed;
+  background-position:0% 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 40%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 40%);
+}
+.dimmer-btn{
+  margin-top:25px;
+  background-color:$white!important;
+  color:$dark-blue!important;
+  border-color:$dark-blue!important;
+}
+.dimmer{
+  padding-top:80px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color:rgba(46,146,69,0.6);
+  width:100%;
+  height:100%;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 40%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 40%);
+}
+
+.catcherbody{
+  display:flex;
+  text-align: center;
+  flex-direction:column;
+  align-items:center;
+
+  h1{
+    color:$white;
   }
 }
 
+@media only screen and (max-device-width: 1366px) {
+    #catcher {
+        background-attachment: scroll;
+    }
+}
+
+//----------------------------- SECTIONS -------------------------------------//
+.list-img-cont{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
 #listSection {
-  background-color: $white;
+  background-color: $dark-blue;
+  padding-bottom:30px;
 
   #listContainer {
+    .listTitleContainer{
+      margin-bottom:25px;
+    }
+    .listtitle1{
+      margin-bottom:-2px;
+    }
+    .listbtn{
+      margin-top:5px;
+    }
+
+
+  .listTitle{
+    color:$white;
+
+  }
     .list {
       padding-left: 0;
-
-      h3 {
-        text-transform: capitalize;
-        padding-bottom: 0.5rem;
-        margin-bottom: -0.6rem;
-      }
+      color:$white;
 
       li {
         list-style: none;
-        margin-top: 0.8rem;
+        margin-top:-10px;
         font-size: 1.3rem;
+
 
         p {
           display: inline-block;
@@ -100,7 +122,7 @@ buttton--green
 
         .fa-angle-right {
           margin-left: 1rem;
-          color: $dark-blue;
+          color: $white;
         }
 
         .list-image {
@@ -119,132 +141,98 @@ buttton--green
 }
 
 #reviewSection {
-  background: $dark-blue;
+background-color:$white;
 
-  .container {
-    margin-top: -5rem;
-  }
-
-  h1 {
-    color: $white;
+h1 {
+    color: $blue;
     font-size: 3rem;
   }
 
   p {
-    color: $white;
+    color: $black;
     font-style: italic;
   }
 
   .review-text {
     font-size: 2.2rem;
   }
-}
-
-.right {
-  float: right;
-  margin-right: 10rem;
-}
-
-.catcherSection {
-  padding: 0!important !important;
-}
-
-#catcherSection {
-  z-index: -1;
-  position: relative;
-  // width:100%;
-  .dimmer {
-    background-color: rgba(40,167,69, 0.8);
-    position: absolute;
-    // top: -5rem;
-    top: -65%;
-    height: 200%;
-    width: 100%;
-    display: flex;
-    left: 0;
-    flex-direction: column;
+  .reviewcontainer{
+    display:flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
+    text-align:left;
+    flex-direction:column;
   }
-
-  .dimmer-btn {
-    margin-top: 3rem;
+  .reviewbtn{
+    align-self: flex-end;
   }
-
-  .catcherTitle {
-    font-size: 4rem;
-    color: $white;
-    margin-bottom: -1rem;
-  }
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: -5%;
-    left: 0;
-    transform-origin: top;
-    transform: skewY(-3deg);
-    width: 100%;
-    height: 20%;
-    background: $white;
-    z-index: 5;
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: 60%;
-    left: 0;
-    transform-origin: left bottom;
-    transform: skewY(5deg);
-    width: 100%;
-    height: 40%;
-    background: $dark-blue;
-    z-index: 4;
-  }
-
-  .whitebtn {
-    color: $dark-blue;
-    background-color: white;
-    text-shadow: 0 1px 0 $dark-blue;
-    border-bottom: 0.3rem solid $dark-blue;
+  .review-info{
+    margin-left:8px;
   }
 }
 
-#contactSection {
-  background-image: url("/images/contact_background.png");
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  margin-left: 0;
-  @media screen and (max-width: 991px) {
-    #contactSection {
-      background-size: 50%;
-    }
-  }
 
+// ----- CONTACT ---- ///
+#contactSection {
+  background-color:$white;
+  background-image:url('/images/riven.png');
+  background-repeat: no-repeat;
+  background-size:cover;
+  margin-left: 0;
+  padding-bottom:0;
+  padding-top:0;
+  text-align:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .contactTitle {
-    color: $dark-blue;
+  color: $white;
     font-size: 3rem;
   }
-
-  .contactText {
-    color: $dark-blue;
-    font-size: 1.4rem;
-    width: 60%;
+  .contactbody{
+    padding:10px;
+    color: $white;
+    font-size:1.3em;
   }
 }
 //----------------------------- FOOTER -------------------------------------//
-
+.footer-cont{
+  display:flex;
+  flex-direction: column;
+  background-color: rgb(20, 20, 20);
+}
+.some-icon a, .some-icon a:active,.some-icon a:focus{
+  color:$white;
+}
+.some-icon a:hover{
+  color:darken($white, 40%);
+}
+.someicon{
+  font-size:1.8rem;
+  margin-left:10px;
+  margin-right:10px;
+}
+.some-footer{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color:inherit;
+  padding-bottom:10px;
+  $light-grey-new: lighten(rgb(150,150,150),10%);
+  color:$light-grey-new;
+}
 #footerSection {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: rgb(20, 20, 20);
+  padding-bottom:20px;
 
   hr {
     background-color: $dark-green;
-    width: 3rem;
+    width:200px;
+    margin-top:10px;
+    margin-bottom:10px;
   }
 
   .footerTitle {
@@ -254,16 +242,14 @@ buttton--green
   .footerList {
     color: #656565;
     font-size: 0.9rem;
-    padding-top: -0.7rem;
+    margin-bottom:5px;
   }
 }
 
 #footer {
-  // padding-top:1.7rem;
   position: relative;
   display: flex;
-  // justify-content: center;
-  // align-items: center;
+
   text-align: center;
 
   p {
@@ -271,4 +257,54 @@ buttton--green
     margin-top: -0.2rem;
     margin-bottom: -1rem;
   }
+}
+
+// ------- FEATURES -------- //
+.modal-row{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align:center;
+  padding:0;
+  margin:0;
+}
+.info_graphic {
+  background-color:$white;
+  clear: both;
+  z-index: 99;
+.col-sm-4{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  text-align: center;
+}
+
+}
+.featurewrap{
+  padding:0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color:$white;
+}
+.info_graphic .info_square {
+    color: $black;
+    line-height: 1.45;
+    font-weight: 400;
+}
+.header_title_style {
+    margin-bottom:-3px;
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: $blue;
+
+}
+.icon{
+  color:$blue;
+  font-size:2rem;
+}
+
+.info_graphic .info_square .info_text {
+    font-size: 1.1rem;
 }

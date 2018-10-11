@@ -10,11 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
+// Routes til home/price/boost/about
 Route::group(['prefix' => 'app'], function () {
 
   Route::get('/index', function () {
@@ -32,7 +32,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
   // Admin sidebar
   Route::get('/boosters', 'BoosterController@index');
   Route::get('/boosters/group', 'BoosterGroupController@index');
-  
+
   // Paypal Routes
   Route::post('paypal/order', 'PaypalController@createOrder');
   Route::get('paypal/orders', 'PaypalController@listPayments');
@@ -65,6 +65,7 @@ Route::group(['prefix' => 'auth'], function () {
     Route::get('/register', function () {
         return view('auth.register');
     });
+
 });
 
 Route::get('/payment/success/process', 'PaypalController@succesProcess');

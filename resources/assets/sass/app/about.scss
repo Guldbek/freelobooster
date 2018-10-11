@@ -1,9 +1,16 @@
-#about {
-  background-image: url("/images/bgpriceoverlay.png");
+// #about {
+//   background-image: url("/images/bgpriceoverlay.png");
+// }
+.about-text{
+  display:flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  padding:0 0 30px 0;
 }
 
 .about-header {
-  padding-top: 56px;
   height: 500px;
   display: flex;
   justify-content: center;
@@ -13,8 +20,7 @@
 
   h1 {
     font-size: 3rem;
-    color: $blue;
-    text-shadow: 1px 1px 3px $dark-blue;
+    color:$white;
   }
 
   p {
@@ -144,4 +150,33 @@
     // background-color:$white;
     min-height: 400px;
   }
+}
+.sideby-cont{
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding:0;
+}
+.sideby-image, .sidebyrow{
+  padding:0px;
+  margin:0px;
+  height:450px;
+}
+.sideby-image,.sidebyrow{
+  width:570px;
+}
+.sidebyrow{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.sideby-text,.sideby-title{
+  padding:5px;
+}
+.sideby-text{
+  width:400px;
 }

@@ -1,158 +1,169 @@
-
 @extends('app.layouts.app')
-
 @section('content')
-@section('bodyId',"boost");
-  <div class="cont" id="rankselection">
-      <div class="row">
-        <div class="col-lg-6">
-          <h2>1. Select your rank</h2>
-          <img src="/images/ranks/silver.png">
-          <div class="wrapper typo">My current rank is
-        <div class="list">
-          <span class="currentrank" id="currentrank">Rank</span>
-          <ul class="list__ul">
-            <li ><a data-rank="0" href="">Bronze</a></li>
-            <li><a data-rank="1" href="">Silver</a></li>
-            <li><a data-rank="2" href="">Gold</a></li>
-            <li><a data-rank="3" href="">Platinum</a></li>
-            <li><a data-rank="4" href="">Diamond</a></li>
-            <li><a data-rank="5" href="">Master</a></li>
-          </ul>
-        </div>
-        <div class="list">
-          <span class="currentrank2 noshow">Divison</span>
-          <ul class="list__ul2">
-            <li><a data-div="0" href="">I</a></li>
-            <li><a data-div="1" href="">II</a></li>
-            <li><a data-div="2" href="">III</a></li>
-            <li><a data-div="3" href="">IV</a></li>
-            <li><a data-div="4" href="">V</a></li>
-          </ul>
+@section('bodyId',"boost")
+<div class="index-bg-pic">
+  <div class="container" id="rankselection">
+    <div class="row header-cont">
+      <div class="col-lg-4 header-text-cont">
+        <h1 class="header-title">Find your price</h1>
+        <p class="header-text">Lorem ipsum dolor sit amet.</p>
       </div>
+      <div class="col-lg-8 header-review-cont">
+        <p class="text-left review-t review-text">"LolBoosting nice review from some random customer"</p>
+        <p class="text-left review-t review-text">4.5 Stars out of 5</p>
+        <p class="text-left review-info">Daniel on 24-07-2003</p>
       </div>
-      <div class="wrapper typo lp-typo noshow">I have
-    <div class="list" id="lp-list">
-      <span class="currentlp">this amount of LP</span>
-      <ul class="lp__ul">
-        <li><a data-lp="0" href="">0-20</a></li>
-        <li><a data-lp="1" href="">20-40</a></li>
-        <li><a data-lp="2" href="">40-80</a></li>
-        <li><a data-lp="3" href="">80-100</a></li>
-      </ul>
     </div>
   </div>
-      </div>
-          <div class="col-lg-6">
-            <h2>2. Select your desired rank</h2>
-            <img src="/images/ranks/plat.png">
-              <div class="wrapper typo">I want to be
-                <div class="list">
-                  <span class="desiredrank">Rank</span>
-                  <ul class="list__ul3">
-                    <li><a href="">Bronze</a></li>
-                    <li><a href="">Silver</a></li>
-                    <li><a href="">Gold</a></li>
-                    <li><a href="">Platinum</a></li>
-                    <li><a href="">Diamond</a></li>
-                    <li><a href="">Master</a></li>
-                  </ul>
-                </div>
-
-                <div class="list">
-                  <span class="desiredrank2 noshow">Divison</span>
-                  <ul class="list__ul4">
-                    <li><a href="">I</a></li>
-                    <li><a href="">II</a></li>
-                    <li><a href="">III</a></li>
-                    <li><a href="">IV</a></li>
-                    <li><a href="">V</a></li>
-                  </ul>
-              </div>
-            </div>
-
-            <div class="wrapper typo desiredlp-typo noshow">I want
-              <div class="list" id="lp-list">
-                <span class="desiredlp">this amount of LP</span>
-                <ul class="lp__ul2">
-                  <li><a href="">0-20</a></li>
-                  <li><a href="">20-40</a></li>
-                  <li><a href="">40-80</a></li>
-                  <li><a href="">80-100</a></li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
+  <div class="test-container" id="arrowdiv">
+    <div class="row">
+      <div class="col-sm-6 arrow-1"></div>
+      <div class="col-sm-6 arrow-2"></div>
+    </div>
   </div>
-    <div class="test-container" id="arrowdiv">
-      <div class="row">
-        <div class="col-md-6 test-div-1"></div>
-        <div class="col-md-6 test-div-2"></div>
-      </div>
-    </div>
-  <div class="pricing-wrapper">
-  <div class="container" id="pricing">
-
-        <div class="col-lg-7">
-        <img class="thumbsUp" src="/images/thumbsUp.gif" alt="">
-        </div>
-
-      <div class="container col-lg-5">
-          <h2>Your Order</h2>
-          <ul class="user-order">
-            <li class="selected-rank">
-              <p class="placeholder-rank-text">Select <a class="user-order-link-text" href="#rankselection">your rank</a> aswell as your <a class="user-order-link-text" href="#rankselection">desired rank</a> to get an estimate</p>
-              <p>
-              <span class="currentrank"></span>
-              <span class="currentrank2"></span>
-              <span class="show-currentlp"></span>
-              <span class="additive"></span>
-              <span class="desiredrank"></span>
-              <span class="desiredrank2"></span>
-              <span class="show-desiredlp"></span>
-            </p>
-            </li>
-            <li class="order-price">Total Cost: <span class="user-price">130$</span> </li>
-            <li class="order-price">Estimated time: <span class="user-price">2-5 days</span> </li>
-            <input type="checkbox" name="priority" id="priority" value="">
-            <label for="priority">I'll pay 25$ more to get prioritized</label>
-          </ul>
-        <button type="button" name="button" class="butttton total-price-btn ">Buy now</button>
-      </div>
-      </div>
-    </div>
 </div>
-  <div class="row section" id="footerSection">
-    <div class="col col-sm-12">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4 col-lg-4">
-              <h6 class="footerTitle">Social Media</h6>
-              <hr>
-              <p class="footerList">Lorem ipsum!</p>
-              <p class="footerList">Lorem ipsum!</p>
-              <p class="footerList">Lorem ipsum!</p>
+<div class="pricing-wrapper">
+  <div class="container" id="pricing">
+    <h1 class="text-center price-title">Find your price</h1>
+    <div class="row" id="ranks">
+      <div class="col-lg-6">
+        <h2 class="selectrank-title">Select your rank</h2>
+        <div class="row rank-row">
+          <div class="col-lg-12">
+            <img src="/images/ranks/bronze.png" alt="" class="rank_img">
+          </div>
+          <div class="col-lg-12">
+            <div class="c_rank">
+              <form method="post" action="price" class="" id="currentRank">
+                {{csrf_field()}}
+                <label for="c_tier">Current tier</label>
+                <select v-model="tier" class="" name="tier" id="c_tier">
+                  <optgroup label="Select your tier">
+                    <option value="1">Bronze</option>
+                    <option value="2">Silver</option>
+                    <option value="3">Gold</option>
+                    <option value="4">Platinum</option>
+                    <option value="5">Diamond</option>
+                    <option value="6">Master</option>
+                  </optgroup>
+                </select>
             </div>
-            <div class="col-sm-4 col-lg-4">
-              <h6 class="footerTitle">Contact Us</h6>
-              <hr>
-              <p class="footerList">Lorem ipsum!</p>
-              <p class="footerList">Lorem ipsum!</p>
-              <p class="footerList">Lorem ipsum!</p>
+            <div class="c_division">
+            <label for="c_division">Current divison</label>
+            <select class="" v-model="division" name="division" id="c_division">
+            <optgroup label="Select your Divison">
+            <option value="1">I</option>
+            <option value="2">II</option>
+            <option value="3">III</option>
+            <option value="4">IV</option>
+            <option value="5">V</option>
+            </optgroup>
+            </select>
             </div>
-            <div class="col-sm-4 col-lg-4">
-              <h6 class="footerTitle">Infomation</h6>
-              <hr>
-              <p class="footerList">Lorem ipsum!</p>
-              <p class="footerList">Lorem ipsum!</p>
-              <p class="footerList">Lorem ipsum!</p>
+            <div class="c_lp">
+            <label for="c_lp">Current amount of LP</label>
+            <select class="" v-model="lp" name="lp" id="c_lp">
+            <optgroup label="Your amount of LP">
+            <option value="1">0-20</option>
+            <option value="2">20-40</option>
+            <option value="3">40-60</option>
+            <option value="4">60-80</option>
+            <option value="5">80-100</option>
+            </optgroup>
+            </select>
+            </div>
+            <div class="c_region">
+            <label for="c_lp">Current region</label>
+            <select class="" v-model="region"  name="region" id="c_region" data-live-search="true">
+            <optgroup label="Select your region">
+            <option value="1">EU West</option>
+            <option value="2">EU Nordic/East</option>
+            <option value="3">North America</option>
+            <option value="4">Latin America North</option>
+            <option value="5">Latin America South</option>
+            <option value="6">Brazil</option>
+            <option value="7">Japan</option>
+            <option value="8">Russia</option>
+            <option value="9">Turkey</option>
+            <option value="10">Oceania</option>
+            <option value="11">Republic of Korea</option>
+            </optgroup>
+            </select>
             </div>
           </div>
         </div>
       </div>
+      <div class="col-lg-6">
+      <h2 class="selectrank-title">Select your desired rank</h2>
+      <div class="row rank-row">
+      <div class="col-lg-12">
+      <img src="/images/ranks/diamond.png" alt="" class="rank_img">
+      </div>
+      <div class="col-lg-12">
+      <div class="c_rank">
+      <label for="c_tier">Desired tier</label>
+      <select class="" name="d_tier">
+      <optgroup label="Select your tier">
+      <option value="1">Bronze</option>
+      <option value="2">Silver</option>
+      <option value="3">Gold</option>
+      <option value="4">Platinum</option>
+      <option value="5">Diamond</option>
+      <option value="6">Master</option>
+      </optgroup>
+      </select>
+      </div>
+      <div class="c_division">
+      <label for="c_division">Desired divison</label>
+      <select class="" v-model="test" name="d_division">
+      <optgroup label="Select your Divison">
+      <option value="1">I</option>
+      <option value="2">II</option>
+      <option value="3">III</option>
+      <option value="4">IV</option>
+      <option value="5">V</option>
+      </optgroup>
+      </select>
+      <div class="checkboxes" id="checkboxes">
+      <label for="fdelivery">I want 2x speed (+50% cost)
+      <input type="checkbox" v-model="checked" id="fdelivery" name="EP" value="1">
+      </label>
+      <label for="schamp">Use a specific champion (+20% cost)
+      <input type="checkbox" v-model="checked" id="schamp" name="SC" value="1">
+      </label>
+      </div>
+      <input type="submit" class="butttton btn-left total-price-btn ">
+      </form>
+      </div>
+      </div>
+      </div>
+      </div>
     </div>
-    @include('app.layouts.footer')
+  </div>
+  <div class="arrow-about-cont" id="arrowdiv-reversed">
+    <div class="row">
+      <div class="col-sm-6 arrow-1"></div>
+      <div class="col-sm-6 arrow-2"></div>
+    </div>
+  </div>
+  <div id="order-wrap">
+    <div class="container">
+      <div class="row order-row">
+        <div class="col-lg-12">
+          <h1 class="order-title">Your order:</h1>
+          <ul class="order-list">
+            <li><span>Division Boost:</span> Bronze III 80-100 lp <i class="fa fa-arrow-right"></i> Silver II</li>
+            <li><span>Region:</span> Brazil</li>
+            <li><span>Express Delivery:</span> +50%</li>
+            <li><span>Specific champion:</span> Quinn +20%</li>
+            <li><span>Total cost: <span class="green">(318,5$ +70%) 450$</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+</div>
+@include('app.layouts.footer')
 @endsection
