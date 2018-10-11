@@ -6,9 +6,9 @@
          <span class="navbar-toggler-icon"></span>
          </button>
          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ml-auto">
-               <li class="nav-item active text-center">
-                  <a class="nav-link white" href="/app">Home <span class="sr-only">(current)</span></a>
+            <ul class="navbar-nav ml-auto navigation-menu">
+               <li class="nav-item text-center">
+                  <a class="nav-link white" href="/app">Home</a>
                </li>
                <li class="nav-item text-center">
                   <a class="nav-link white" href="/app/about">About Us</a>
@@ -21,13 +21,13 @@
                <hr class="white nav-item nav-link nav-divider mobile-divide">
                <li class="white nav-item nav-link nav-divider web-divide">|</li>
                <li class="nav-item dropdown text-center">
-                  <a class="nav-link white dropdown-toggle user" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  {{Auth::user()->name}}
+                  <a class="nav-link white dropdown-toggle user" href="/user/profile" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{ucfirst(Auth::user()->name)}}
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                     <a class="dropdown-item" href="#">Settings</a>
-                     <a class="dropdown-item" href="#">Purchases</a>
-                     <a class="dropdown-item danger" href="auth/login">Logout</a>
+                     <a class="dropdown-item user-page" href="/user/settings">Settings</a>
+                     <a class="dropdown-item user-page" href="/user/purchases">Purchases</a>
+                     <a class="dropdown-item danger user-page" href="/user/logout">Logout</a>
                   </div>
                   @else
                <li class="white nav-item nav-link nav-divider web-divide">|</li>

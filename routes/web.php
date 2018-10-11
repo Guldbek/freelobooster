@@ -14,6 +14,7 @@
 //     return view('welcome');
 // });
 
+// Routes til home/price/boost/about
 Route::group(['prefix' => 'app'], function () {
     Route::get('/', function () {
         return view('app.index');
@@ -27,22 +28,9 @@ Route::group(['prefix' => 'app'], function () {
     Route::get('/about', function () {
         return view('app.about');
     });
-
-    Route::POST('/price', function () {
-        $tier = $_POST['tier'];
-        $division = $_POST['division'];
-        $lp = $_POST['lp'];
-        $region = $_POST['region'];
-        $d_tier = $_POST['d_tier'];
-        $d_division = $_POST['d_division'];
-        if(isset($_POST['EP'])){
-        $ep = $_POST['EP'];
-        }
-        if(isset($_POST['SC'])){
-        $sc = $_POST['SC'];
-        }
-    });
 });
+
+// Routes til login/register
 Route::group(['prefix' => 'auth'], function () {
     Route::get('/login', function () {
         return view('auth.login');
@@ -50,13 +38,21 @@ Route::group(['prefix' => 'auth'], function () {
     Route::get('/register', function () {
         return view('auth.register');
     });
+
 });
 
-Route::group(['prefix' => 'admin'], function () {
+// Route til logout
+Route::group(['prefix' => 'user', 'middleware' => ['auth']], function(){
+  Route::get('/logout', function(){
+     Auth::logout();
+     return redirect()->home();
+   });
+});
+// Routes til dashboard / boosts
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('/boosts', function () {
         return view('admin.boosts');
     });
-
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
     });

@@ -3,11 +3,8 @@
 @section('bodyId',"index")
 <div class="index-bg-pic">
    <div class="contain" id="index-container">
-      <div class="index-header">
-         <h1 class="index-header-title">Welcome To Freelobooster</h1>
-         <p>Lorem ipsum dolor sit amet consituat </p>
+         <header-text title="Welcome To Freelobooster!" body="Lorem ipsum dolar sit amet"></header-text>
          <!-- <img  draggable="false" (dragstart)="false;" class="img-fluid tt img-overlap-headerpic unselectable" src="{{ asset('images/headimage.jpg') }}"/> -->
-      </div>
    </div>
    <div class="test-container" id="arrowdiv">
      <div class="row">
@@ -24,30 +21,18 @@
             <div class="row text-center modals">
                <div class="col-sm-12 modal-row">
 
-                  <div class="col-sm-4">
-                     <div class="info_square">
-                        <p class="header_title_style squaretitle">Feature</p>
-                        <div class="icon"><i class="fa fa-desktop" aria-hidden="true"></i></div>
-                        <p class="info_text">Lorem ipsum dolor sit amet bla bla ipsum dolor sit amet bla bla ipsum dolor sit amet bla bla</p>
-                     </div>
-                     <div class="col-sm-1"></div>
-                  </div>
-                  <div class="col-sm-4">
-                     <div class="col-sm-1"></div>
-                     <div class="info_square">
-                        <p class="header_title_style squaretitle">Feature</p>
-                        <div class="icon"><i class="fa fa-bath" aria-hidden="true"></i>
-                        </div>
-                        <p class="info_text">Lorem ipsum dolor sit amet bla bla ipsum dolor sit amet bla bla ipsum dolor sit amet bla bla</p>
-                     </div>
-                  </div>
-                  <div class="col-sm-4">
-                     <div class="info_square">
-                        <p class="header_title_style squaretitle">Feature</p>
-                        <div class="icon"><i class="fa fa-table" aria-hidden="true"></i>
-                        </div>
-                        <p class="info_text">Lorem ipsum dolor sit amet bla bla ipsum dolor sit amet bla bla ipsum dolor sit amet bla bla</p>
-                     </div>
+                   <info-square icon="  <i class='fa fa-desktop' aria-hidden='true'></i>" title="Features" body="Lorem ipsum dolar, sit amet constituar. Lorem ipsum dolar, sit amet constituar. Lorem ipsum dolar, sit amet constituar.">
+                    <i class='fa fa-desktop' aria-hidden='true'></i>
+                   </info-square>
+
+                   <info-square title="Dropdown" body="Lorem ipsum dolar, sit amet constituar. Lorem ipsum dolar, sit amet constituar. Lorem ipsum dolar, sit amet constituar.">
+                    <i class='fa fa-desktop' aria-hidden='true'></i>
+                   </info-square>
+
+                   <info-square title="Manchet" body="Lorem ipsum dolar, sit amet constituar. Lorem ipsum dolar, sit amet constituar. Lorem ipsum dolar, sit amet constituar.">
+                    <i class='fa fa-desktop' aria-hidden='true'></i>
+                   </info-square>
+
                   </div>
                </div>
             </div>
@@ -55,7 +40,6 @@
       </div>
    </div>
    </div>
-</div>
 <div class="col-lg-12 catchwrapper" id="catcher">
   <div class="dimmer">
     <div class="container">
@@ -72,23 +56,14 @@
       <div class="container">
          <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-6" id="listContainer">
-<div class="listTitleContainer">
-               <h3 class="listTitle listtitle1">Boosting with</h3>
-               <h3 class="listTitle listtitle2">customer service in focus</h3>
+              <div class="listTitleContainer">
+                <h3 class="listTitle listtitle1">Boosting with</h3>
+                <h3 class="listTitle listtitle2">customer service in focus</h3>
                </div>
                <ul class="list">
-                  <li>
-                     <i class="fas fa-angle-right"></i>
-                     <p>Lorem ipsum dolor</p>
-                  </li>
-                  <li>
-                     <i class="fas fa-angle-right"></i>
-                     <p>Lorem ipsum dolor</p>
-                  </li>
-                  <li>
-                     <i class="fas fa-angle-right"></i>
-                     <p>Lorem ipsum dolor</p>
-                  </li>
+                  <list-item>Select item</list-item>
+                  <list-item>Whoose item is this</list-item>
+                  <list-item>Option is invalid</list-item>
                   <button type="button" name="button" class="listbtn butttton">Read more</button>
                </uL>
             </div>

@@ -5,27 +5,21 @@
          <div class="col col-sm-12">
             <div class="container">
                <div class="row">
-                  <div class="col-sm-4 col-lg-4">
-                     <h6 class="footerTitle">Social Media</h6>
-                     <hr>
-                     <p class="footerList">Lorem ipsum!</p>
-                     <p class="footerList">Lorem ipsum!</p>
-                     <p class="footerList">Lorem ipsum!</p>
-                  </div>
-                  <div class="col-sm-4 col-lg-4">
-                     <h6 class="footerTitle">Contact Us</h6>
-                     <hr>
-                     <p class="footerList">Lorem ipsum!</p>
-                     <p class="footerList">Lorem ipsum!</p>
-                     <p class="footerList">Lorem ipsum!</p>
-                  </div>
-                  <div class="col-sm-4 col-lg-4">
-                     <h6 class="footerTitle">Infomation</h6>
-                     <hr>
-                     <p class="footerList">Lorem ipsum!</p>
-                     <p class="footerList">Lorem ipsum!</p>
-                     <p class="footerList">Lorem ipsum!</p>
-                  </div>
+                 <footer-list title="Social Media">
+                   <footer-list-item>Lorem ipsum dolar</footer-list-item>
+                   <footer-list-item>Lorem ipsum dolar</footer-list-item>
+                   <footer-list-item>Lorem ipsum dolar</footer-list-item>
+                 </footer-list>
+                 <footer-list title="Accounting">
+                   <footer-list-item>Lorem ipsum dolar</footer-list-item>
+                   <footer-list-item>Lorem ipsum dolar</footer-list-item>
+                   <footer-list-item>Lorem ipsum dolar</footer-list-item>
+                 </footer-list>
+                 <footer-list title="Locations">
+                   <footer-list-item>Lorem ipsum dolar</footer-list-item>
+                   <footer-list-item>Lorem ipsum dolar</footer-list-item>
+                   <footer-list-item>Lorem ipsum dolar</footer-list-item>
+                 </footer-list>
                </div>
             </div>
          </div>

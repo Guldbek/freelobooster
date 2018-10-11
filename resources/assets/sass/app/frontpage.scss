@@ -37,7 +37,7 @@
   height:400px;
   background-image:url('/images/catcher.png');
   background-attachment: fixed;
-  background-position:0% -300%;
+  background-position:0% 50px;
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 40%);
@@ -304,6 +304,7 @@ h1 {
   color:$blue;
   font-size:2rem;
 }
+
 .info_graphic .info_square .info_text {
     font-size: 1.1rem;
 }

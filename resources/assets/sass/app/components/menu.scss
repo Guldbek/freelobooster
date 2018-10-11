@@ -6,6 +6,12 @@
     height:auto;
     width:200px;
   }
+  .navigation-menu a.active{
+    color:blue;
+  }
+  .dropdown-item.active{
+    background-color:inherit;
+  }
   // -----------------------------------------------MEDIA QUERIES-------------------------------------------------------------------
   @media(max-width: 991px) {
     hr.white.nav-item.nav-link.nav-divider.mobile-divide {
