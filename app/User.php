@@ -68,5 +68,14 @@ class User extends Authenticatable
         return Carbon::createFromFormat('m/d/Y', $this->auction_end);
     }
 
+    public function getSum()
+    {
+      $sum = 0;
+      foreach($this->orders as $order):
+        $sum = $sum + $order->price;
+      endforeach;
+
+      return $sum;
+    }
 
 }

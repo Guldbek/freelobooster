@@ -22,20 +22,23 @@ Route::group(['prefix' => 'app'], function () {
   });
 });
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
-  // Admin sidebar
-  Route::get('/boosters', 'BoosterController@index');
-  Route::get('/boosters/group', 'BoosterGroupController@index');
+  // Dashboard
   Route::get('/dashboard', function () {
       return view('admin.dashboard');
   });
 
+  // Admin sidebar
+  Route::get('/boosters', 'BoosterController@index');
+  Route::get('/boosters/group', 'BoosterGroupController@index');
+  
+  // Paypal Routes
+  Route::post('paypal/order', 'PaypalController@createOrder');
+  Route::get('paypal/orders', 'PaypalController@listPayments');
 
   // Use to create league ranks
   // Route::get('/leagueranks/make', 'LeagueRankController@makeRanks');
-
-  Route::post('/order', 'OrderController@store');
 
   // User routes
   Route::get('/users', 'UserController@index');
@@ -47,7 +50,14 @@ Route::group(['prefix' => 'admin'], function () {
 
   Route::put('/booster/{booster}', 'BoosterController@store');
 
+  Route::resource('jobs', 'JobController');
+
 });
+
+
+Route::post('/order', 'OrderController@store');
+
+
 Route::group(['prefix' => 'auth'], function () {
     Route::get('/login', function () {
         return view('auth.login');
@@ -57,10 +67,13 @@ Route::group(['prefix' => 'auth'], function () {
     });
 });
 
+Route::get('/payment/success/process', 'PaypalController@succesProcess');
+
 Route::POST('calc/price', 'LeagueRankController@index');
 Route::get('/', function () {
     return view('app.index');
 });
+
 
 Route::get('/calc', function () {
     return view('app.price');

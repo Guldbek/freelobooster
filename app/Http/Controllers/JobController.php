@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Job;
 use Illuminate\Http\Request;
+use Session;
 
 class JobController extends Controller
 {
@@ -14,7 +15,9 @@ class JobController extends Controller
      */
     public function index()
     {
-        //
+      $openJobs = Job::where('status', 'open')->get();
+      $userJobs = Job::where('booster_id', 5)->with(['order.info.rankTo', 'order.info.rankFrom'])->get();
+      return view('admin.jobs.index', compact(['openJobs', 'userJobs']));
     }
 
     /**
@@ -69,7 +72,14 @@ class JobController extends Controller
      */
     public function update(Request $request, Job $job)
     {
+      $job->booster_id = 5;
+      $job->status = "pending";
+      $job->save();
 
+      Session::flash('message', 'Job accepted!');
+
+      // redirect
+      return redirect('admin/jobs');
     }
 
     /**

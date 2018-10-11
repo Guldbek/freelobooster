@@ -23,9 +23,14 @@ class Booster extends Model
 
 
    public function getSumOfPercentage() {
-    $boosterGroupPercentage = $this->boosterGroup->payment_percentage;
-    $userPercentage = $this->payment_discount;
-    return $boosterGroupPercentage + $userPercentage;
+
+
+      $boosterGroupPercentage = $this->boosterGroup->payment_percentage;
+      $userPercentage = $this->payment_discount;
+      return $boosterGroupPercentage + $userPercentage;
+
+    return false;
+
    }
 
 }

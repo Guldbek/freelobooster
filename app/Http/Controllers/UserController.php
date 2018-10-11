@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Booster;
 use App\Booster_group;
 use Session;
 use Illuminate\Http\Request;
@@ -70,7 +71,7 @@ class UserController extends Controller
   */
   public function show(User $user)
   {
-    $user = $user::where('id', '=', $user->id)->with(['boosterJobs', 'userJobs', 'orders', 'booster', 'booster.boosterGroup'])->first();
+    $user = $user::where('id', '=', $user->id)->with(['boosterJobs', 'userJobs', 'orders', 'orders.info', 'orders.info.rankTo', 'orders.info.rankFrom', 'booster', 'booster.boosterGroup'])->first();
 
     $boosterGroups = Booster_group::all();
 
@@ -90,7 +91,8 @@ class UserController extends Controller
   */
   public function edit(User $user)
   {
-    //
+
+
   }
 
   /**
@@ -102,7 +104,18 @@ class UserController extends Controller
   */
   public function update(Request $request, User $user)
   {
-    $user->update(Request::all());
+    $user->update($request->all());
+
+    if($request->has('role')){
+      if($request->get('role') == 3) {
+        $booster = new Booster;
+        $booster->create([
+          'user_id' => $user->id,
+          'booster_group_id' => 2,
+          'payment_discount' => 0,
+        ]);
+      }
+    }
 
     Session::flash('message', 'User succesfully updated!');
 

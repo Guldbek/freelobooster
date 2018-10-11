@@ -4,8 +4,6 @@
 @section('content')
 
 
-
-
 <div id="profile">
   <div class="col-lg-8 data_table">
       <div class="d-flex justify-content-between">
@@ -13,14 +11,14 @@
             <h2 class="inline">Profile : {{ ucfirst($data['user']->name) }}</h2>
         </div>
         <div>
-          <button class="btn btn-outline-danger" data-toggle="modal" data-target="#deleteUser" type="submit">Delete</button>
+            <button class="btn btn-outline-danger" data-toggle="modal" data-target="#deleteUser" type="submit">Delete</button>
         </div>
       </div>
       <div class="row pt-3 pb-3">
         <div class="col-md-6">
             <p><b>Created at:</b> <i>{{$data['user']->created_at}}</i></p>
             <p><b>Role:</b> <i>{{$data['user']->getUserRoleName()}}</i></p>
-            <p><b>Spend:</b> <i>230€</i></p>
+            <p><b>Spend:</b> <i>{{$data['user']->getSum()}}€</i></p>
             @if($data['user']->role == "3")
               <p><b>Percentage cut:</b> <i>{{$data['user']['booster']->getSumOfPercentage()}}</i></p>
 
@@ -96,63 +94,41 @@
         </a>
       </div>
       <h3>Orders</h3>
+
       <div id="accordion" class="pt-3 pb-3">
-        <div class="card mt-1 mb-1">
-          <div class="card-header" id="headingOne">
-            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-              <button class="btn btn-light" data-toggle="collapse" data-target="#pending" aria-expanded="true" aria-controls="pending">
-                Order id #23991 <span class="badge badge-warning">Pending</span>
-              </button>
-              <button class="btn">
-                Go to
-              </button>
-            </h5>
-          </div>
-          <div id="pending" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-            <div class="card-body">
-              <p class="pb-2 pt"><b>Created at:</b> <i>{{$data['user']->created_at}}</i></p>
-              <p><b>Rank from:</b> <i>Bronze 1</i></p>
-              <p><b>Rank to:</b> <i>Bronze 2</i></p>
+        @foreach ($data['user']['orders'] as $order)
+          <div class="card mt-1 mb-1">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0 d-flex justify-content-between align-items-center">
+                <button class="btn btn-light" data-toggle="collapse" data-target="#pending" aria-expanded="true" aria-controls="pending">
+                  Order id #{{$order->id}}
+                   @if($order->status == "approved")
+                    <span class="badge badge-success">Paid</span>
+                   @endif
+                   @if($order->status == "created")
+                     <span class="badge badge-warning">Pending</span>
+                   @endif
+                   @if($order->status == "failed")
+                    <span class="badge badge-danger">Canceled</span>
+                   @endif
+                </button>
+                <a class="btn" href="/admin/order/{{$order->id}}">
+                  Go to
+                </a>
+              </h5>
+            </div>
+            <div id="pending" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <p class="pb-2 pt"><b>Created at:</b> <i>{{$order->created_at}}</i></p>
+                <p><b>Rank from:</b> <i>{{ $order['info']['rankFrom']->rank }}</i></p>
+                <p><b>Rank to:</b> <i>{{$order['info']['rankTo']->rank}}</i></p>
 
-              <p class="mt-5"><b>Price:</b> <i>45€</i></p>
+                <p class="mt-5"><b>Price:</b> <i>{{ $order->price }}€</i></p>
 
+              </div>
             </div>
           </div>
-        </div>
-        <div class="card mt-1 mb-1">
-          <div class="card-header" id="headingOne">
-            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-              <button class="btn btn-light" data-toggle="collapse" data-target="#paid" aria-expanded="true" aria-controls="paid">
-                Order id #23991 <span class="badge badge-success">Paid</span>
-              </button>
-              <button class="btn">
-                Go to
-              </button>
-            </h5>
-          </div>
-          <div id="paid" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-            <div class="card-body">
-
-            </div>
-          </div>
-        </div>
-        <div class="card mt-1 mb-1">
-          <div class="card-header" id="headingOne">
-            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-              <button class="btn btn-light" data-toggle="collapse" data-target="#canceld" aria-expanded="true" aria-controls="canceld">
-                Order id #23991 <span class="badge badge-danger">Canceled</span>
-              </button>
-              <button class="btn">
-                Go to
-              </button>
-            </h5>
-          </div>
-          <div id="canceld" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-            <div class="card-body">
-
-            </div>
-          </div>
-        </div>
+        @endforeach
       </div>
   </div>
 </div>

@@ -17,16 +17,13 @@ class CreateOrdersTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->string('ticket');
-            $table->integer('order_id')->unsigned();
             $table->string('price');
+            $table->string('status');
 
             $table->timestamps();
         });
         Schema::table('orders', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users');
-        });
-        Schema::table('jobs', function (Blueprint $table ) {
-            $table->foreign('order_id')->references('id')->on('orders');
         });
     }
 

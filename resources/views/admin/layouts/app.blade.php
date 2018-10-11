@@ -92,6 +92,11 @@
                       <a href="/admin/ranks">Ranks</a>
                     </div>
                   </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <a href="/admin/jobs">Jobs</a>
+                    </div>
+                  </div>
               </div>
               <div class="col-md-9">
                 <div class="row">
@@ -117,7 +122,7 @@
         </div>
     </div>
   </div>
-  @include('/admin/modal') 
+  @include('/admin/modal')
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
